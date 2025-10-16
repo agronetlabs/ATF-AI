@@ -1,0 +1,30 @@
+name: Sync ATF-AI Badges
+on:
+  push:
+    paths:
+      - "README.md"          # dispara sempre que o README mudar
+  workflow_dispatch:         # pode acionar manualmente via UI
+
+jobs:
+  propagate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync README to child repositories
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🔄 Starting badge sync from ATF-AI to children..."
+          base64_content=$(base64 -w0 README.md)
+          for repo in AgroPay AgroCrypto agronet-core; do
+            echo "→ Updating README in agronetlabs/\$repo..."
+            gh api repos/agronetlabs/\$repo/contents/README.md \
+              -X PUT \
+              -f message="chore: sync ATF-AI badges" \
+              -f content="\$base64_content" \
+              -f branch="main" \
+              || echo "⚠️  Skipping \$repo (possibly protected)"
+          done
+          echo "✅ Badge sync complete."
