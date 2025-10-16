@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EIP-8040-ATF Asset Descriptor",
+  "type": "object",
+  "required": ["asset_id","issuer","jurisdiction","compliance","provenance","ledger"],
+  "properties": {
+    "asset_id": {"type":"string","format":"uri"},
+    "issuer": {"type":"string"},
+    "jurisdiction": {"type":"string","pattern":"^[A-Z]{2}$"},
+    "compliance": {
+      "type":"object",
+      "required":["attestations"],
+      "properties":{"attestations":{"type":"array","items":{"type":"string"}}}
+    },
+    "provenance": {
+      "type":"object",
+      "required":["hash"],
+      "properties":{"hash":{"type":"string","pattern":"^[A-Fa-f0-9]{64}$"}}
+    },
+    "ledger": {
+      "type":"object",
+      "required":["ref"],
+      "properties":{"ref":{"type":"object","required":["chainId","tx","block"],
+        "properties":{
+          "chainId":{"type":"integer"},
+          "tx":{"type":"string"},
+          "block":{"type":"integer"}
+        }}}}
+  }
+}
