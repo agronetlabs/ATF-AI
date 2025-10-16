@@ -73,4 +73,4 @@ Implementation and certification trademarks remain under **AgroNet Labs** govern
 **AgroNet Labs LLC**  
 <https://agronet.ai>  
 <https://agrocrypto.network>  
-**E-mail:** contact@agronet.io
+**E-mail:** support@agronet.io
