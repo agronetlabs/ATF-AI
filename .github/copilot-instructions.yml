@@ -8,3 +8,6 @@ rules:
   auto_merge:
     enabled: true
     method: squash
+  auto_label:
+    enabled: true
+    labels: ["auto", "ci"]
