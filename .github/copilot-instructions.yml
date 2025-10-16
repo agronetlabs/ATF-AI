@@ -1,0 +1,13 @@
+permissions:
+  pull_requests: write
+  contents: write
+rules:
+  auto_review:
+    enabled: true
+    comment: "✅ Auto-approved by Copilot CI"
+  auto_merge:
+    enabled: true
+    method: squash
+  auto_label:
+    enabled: true
+    labels: ["auto", "ci"]
