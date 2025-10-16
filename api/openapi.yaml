@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: ATF-AI Verify API
+  version: 1.0.0
+paths:
+  /verify:
+    post:
+      summary: Validate an EIP-8040-ATF descriptor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../specs/eip-8040-atf.schema.json
+      responses:
+        '200':
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [valid, seal, details]
+                properties:
+                  valid:  { type: boolean }
+                  seal:   { type: string, description: "Detached JWS signature by AgroNet Labs" }
+                  details:{ type: object }
