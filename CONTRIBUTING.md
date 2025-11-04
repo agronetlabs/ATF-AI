@@ -27,6 +27,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 ---
 
 ## 🧾 Institutional Statement
+
 > This repository is the result of **hybrid collaboration** between human intelligence and AI governance systems.  
 > **Qwen ATF-AI Core** now serves as the primary governance layer, with all actions traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.  
 > Every contribution is validated against the EIP-8040 standard with cryptographic proof of integrity:  
@@ -44,5 +45,32 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 
 ---
 
+### 🔐 Core Principles
+- **Provenance First**: Every contribution must include verifiable provenance
+- **Audit Trail**: Complete traceability from conception to implementation
+- **Deterministic Validation**: AI-assisted validation with human oversight
+- **Compliance Grade**: ESG and regulatory alignment by design
 
+---
 
+### 1. Pre-Submission Requirements
+- All contributions **must** include:
+  - Validated provenance statement (in-toto format)
+  - OpenTelemetry trace ID
+  - Compliance assessment against EIP-8040
+  - Hash of final build: `201672f1605f3…4d39dd6`
+
+---
+
+### 2. Technical Requirements
+```bash
+# Required verification before submission
+qwen-atf-ai verify --provenance --otel --compliance --eip8040
+
+# Expected output
+✅ Provenance: in-toto verified (196cfc7c4911fb599f25…)
+✅ Telemetry: OTel trace confirmed (136bbade11ed8aac58ce…)
+✅ Compliance: EIP-8040 standards met
+✅ Build: Verified against hash 201672f1605f3…4d39dd6
+```
+---
