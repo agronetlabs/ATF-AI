@@ -21,7 +21,7 @@ Greenwashing practices, misleading sustainability claims, or unverifiable ESG pr
 ---
 
 ### 4. Interoperability and Institutional Standardization  
-All tokens issued under ATF-AI must comply with recognized standards (e.g., ERC‑8040). Projects are required to ensure cross-chain operability and alignment with institutional-grade identifiers (ISIN, LEI, etc.).
+All tokens issued under ATF-AI must comply with recognized standards (e.g., ERC‑8040). Projects are required to ensure cross-chain operability and alignment with institutional-grade identifiers (ERC-8040>ETH>ETF).
 
 ---
 
@@ -42,3 +42,4 @@ Any entity found to violate this Code will be subject to enforcement, including 
 
 > **ATF-AI is the world’s first AI-Governed DAO for ESG Tokenization.**  
 > We don’t ask for trust — we deliver verifiable truth.
+
