@@ -21,7 +21,7 @@
 
 **Purpose.** AI-driven digitalization of financial assets with built-in compliance, auditability, and interoperability — fully aligned to **EIP-8040**.  
 **Model.** A **free and open protocol** for adoption by enterprises, governments, and technology providers.  
-Certified implementations are **coordinated by AgroNet Labs** under the **AgroCrypto Trust Framework (ATF-AI)**.
+Certified implementations are **coordinated by AgroNet Labs** under the **(ATF-AI: Autonomus Trust Framework) (ATF-AI)**.
 
 
 ---
@@ -62,7 +62,7 @@ Each implementation can be extended with **AI validators** (e.g. GPT-5, Gemma, L
 ## 🔒 Governance
 
 - Open, AI-assisted **DAO governance** for validation and certification.  
-- Coordinated through **AgroNet Labs**, following the **AgroCrypto Trust Framework (ATF)**.  
+- Coordinated through **AgroNet Labs**, following the **(ATF-AI: Autonomus Trust Framework (ATF)**.  
 - Institutional integration available via **ISIN**, **LEI**, and **OIDC/JWT** standards.
 
 ---
