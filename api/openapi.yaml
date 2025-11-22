@@ -5,7 +5,7 @@ info:
 paths:
   /verify:
     post:
-      summary: Validate an EIP-8040-ATF descriptor
+      summary: Validate an ERC-8040-ATF descriptor
       requestBody:
         required: true
         content:
