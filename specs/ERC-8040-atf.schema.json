@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "EIP-8040-ATF Asset Descriptor",
+  "title": "ERC-8040-ATF Asset Descriptor",
   "type": "object",
   "required": ["asset_id","issuer","jurisdiction","compliance","provenance","ledger"],
   "properties": {
