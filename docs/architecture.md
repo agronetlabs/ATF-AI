@@ -4,7 +4,7 @@ The **ATF-AI** system provides an interoperable compliance layer for digitalized
 It validates asset descriptors through verifiable attestations, linked ledgers, and auditable provenance.
 
 **Core Components**
-- `specs/eip-8040-atf.schema.json` — Schema definition.
+- `specs/ERC-8040-atf.schema.json` — Schema definition.
 - `api/openapi.yaml` — Verify endpoint specification.
 - `specs/registry.json` — Sample asset registry.
 - `docs/manifesto.md` — Governance principles.
