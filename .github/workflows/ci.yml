@@ -9,4 +9,4 @@ jobs:
         with:
           node-version: '20'
       - run: npm i -g ajv-cli ajv-formats
-      - run: ajv compile -s specs/eip-8040-atf.schema.json -c ajv-formats
+      - run: ajv compile -s specs/erc-8040-atf.schema.json -c ajv-formats
