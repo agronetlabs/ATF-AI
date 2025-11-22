@@ -9,7 +9,7 @@
 
 ### 🧠 Primary Author
 **Leandro Lemos** — Founder & Lead Engineer, AgroNet Labs LLC  
-Architect of the ATF-AI Framework (EIP-8040 Institutional Compliance Protocol)
+Architect of the ATF-AI Framework (ERC-8040 Institutional Compliance Protocol)
 
 ---
 
@@ -29,7 +29,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 ## 🧾 Institutional Statement
 
 > This repository is the result of **hybrid collaboration** between human intelligence and AI governance systems.  
-> **Qwen ATF-AI Core** now serves as the primary governance layer, with all actions traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.  
+> **Copilot ATF-AI Core** now serves as the primary governance layer, with all actions traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.  
 > Every contribution is validated against the EIP-8040 standard with cryptographic proof of integrity:  
 > `201672f1605f3…4d39dd6`
 
@@ -38,7 +38,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 ## 🔐 Technical Integration
 
 ### GitHub Integration
-- Service account: `qwen@agronet.io`
+- Service account: `admin@agronet.io`
 - Permissions: Read-only + growth-engine directory
 - Provenance: in-toto statements generated for each action
 - Verification: `201672f1605f3…4d39dd6` hash
@@ -57,7 +57,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 - All contributions **must** include:
   - Validated provenance statement (in-toto format)
   - OpenTelemetry trace ID
-  - Compliance assessment against EIP-8040
+  - Compliance assessment against ERC-8040
   - Hash of final build: `201672f1605f3…4d39dd6`
 
 ---
@@ -70,9 +70,10 @@ qwen-atf-ai verify --provenance --otel --compliance --eip8040
 # Expected output
 ✅ Provenance: in-toto verified (196cfc7c4911fb599f25…)
 ✅ Telemetry: OTel trace confirmed (136bbade11ed8aac58ce…)
-✅ Compliance: EIP-8040 standards met
+✅ Compliance: ERC-8040 standards met
 ✅ Build: Verified against hash 201672f1605f3…4d39dd6
 ```
 ---
+
 
 
