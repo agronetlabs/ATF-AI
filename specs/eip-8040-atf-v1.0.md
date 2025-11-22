@@ -1,5 +1,5 @@
-# EIP-8040-ATF v1.0 — Compliance Layer
-**Scope.** Auditable digital representation of financial assets, validated through **ATF-AI** and anchored per **EIP-8040**.
+# ERC-8040-ATF v1.0 — Compliance Layer
+**Scope.** Auditable digital representation of financial assets, validated through **ATF-AI** and anchored per **ERC-8040**.
 
 ## Required Fields
 - `asset_id` (string, URI)
