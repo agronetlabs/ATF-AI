@@ -14,12 +14,12 @@
 
 ---
 
-# ATF-AI — Open Compliance Protocol (EIP-8040)
+# ATF-AI — Open Compliance Protocol (ERC-8040)
 
 > **Compliance-as-a-Service Protocol.**  
-> Fully aligned with EIP-8040 and governed by a certified AI-based DAO for institutional-grade digital compliance, auditability, and asset legitimacy.
+> Fully aligned with ERC-8040 and governed by a certified AI-based DAO for institutional-grade digital compliance, auditability, and asset legitimacy.
 
-**Purpose.** AI-driven digitalization of financial assets with built-in compliance, auditability, and interoperability — fully aligned to **EIP-8040**.  
+**Purpose.** AI-driven digitalization of financial assets with built-in compliance, auditability, and interoperability — fully aligned to **ERC-8040**.  
 **Model.** A **free and open protocol** for adoption by enterprises, governments, and technology providers.  
 Certified implementations are **coordinated by AgroNet Labs** under the **(ATF-AI: Autonomus Trust Framework) (ATF-AI)**.
 
@@ -29,7 +29,7 @@ Certified implementations are **coordinated by AgroNet Labs** under the **(ATF-A
 ## 🌍 Vision
 
 ATF-AI establishes a **machine-readable layer of financial compliance** — allowing any asset, registry, or institution to prove legitimacy and origin on-chain or off-chain.  
-It provides the missing bridge between **digital asset representation (EIP-8040)** and **institutional governance**.
+It provides the missing bridge between **digital asset representation (ERC-8040)** and **institutional governance**.
 
 > “The wheel already exists.  
 > We’re adding the **axle, steering, and brakes** — with AI, compliance, and interoperability.”
@@ -40,7 +40,7 @@ It provides the missing bridge between **digital asset representation (EIP-8040)
 
 | Module | Description |
 |---------|--------------|
-| **/specs** | Core specification — EIP-8040-ATF schema (v1.0), registry, and compliance data model. |
+| **/specs** | Core specification — ERC-8040-ATF schema (v1.0), registry, and compliance data model. |
 | **/api** | RESTful API — OpenAPI `/verify` endpoint for validation and attestation. |
 | **/docs** | Manifesto, governance policy, and architectural diagrams. |
 | **/examples** | Reference JSON assets and verification scripts. |
@@ -55,7 +55,7 @@ The ATF-AI protocol operates in **three layers**:
 2. **Compliance Layer (ATF-AI)** — Adds attestations, provenance, and jurisdiction context.  
 3. **Verification Layer (ATF-AI Verify API)** — Performs validation and digital signature (JWS).
 
-Each implementation can be extended with **AI validators** (e.g. GPT-5, Gemma, LLaMA) for semantic and jurisdictional compliance checks.
+Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot, Gemma, LLama, Deep Seek, Qwen) for semantic and jurisdictional compliance checks.
 
 ---
 
@@ -71,7 +71,7 @@ Each implementation can be extended with **AI validators** (e.g. GPT-5, Gemma, L
 
 | Stage | Component | Status |
 |--------|------------|--------|
-| Spec v1.0 | `specs/eip-8040-atf.schema.json` | ✅ Stable |
+| Spec v1.0 | `specs/erc-8040-atf.schema.json` | ✅ Stable |
 | API Verify | `api/openapi.yaml` | ✅ Available |
 | CI Validation | `.github/workflows/ci.yml` | ✅ Passing |
 | Pages Docs | `/docs` | 🚀 Published |
