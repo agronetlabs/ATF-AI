@@ -55,7 +55,7 @@ The ATF-AI protocol operates in **three layers**:
 2. **Compliance Layer (ATF-AI)** — Adds attestations, provenance, and jurisdiction context.  
 3. **Verification Layer (ATF-AI Verify API)** — Performs validation and digital signature (JWS).
 
-Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot, Gemma, LLama, Deep Seek, Qwen) for semantic and jurisdictional compliance checks.
+Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot, Gemma, LLama, Deep Seek, Qwen, models) for semantic and jurisdictional compliance checks.
 
 ---
 
