@@ -65,7 +65,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 ### 2. Technical Requirements
 ```bash
 # Required verification before submission
-qwen-atf-ai verify --provenance --otel --compliance --eip8040
+Copilot-atf-ai verify --provenance --otel --compliance --erc8040
 
 # Expected output
 ✅ Provenance: in-toto verified (196cfc7c4911fb599f25…)
