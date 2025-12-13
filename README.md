@@ -1,3 +1,5 @@
+[![ISO 20022 Compatible](https://img.shields.io/badge/ISO%2020022-Compatible-00a651?style=for-the-badge&logo=swift&logoColor=white)](https://www.iso20022.org/)
+[![SWIFT Ready](https://img.shields.io/badge/SWIFT-Ready-ff6600?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
 [![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/atf-ai)
 [![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/atf-ai)
 [![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
@@ -36,6 +38,23 @@ It provides the missing bridge between **digital asset representation (ERC-8040)
 
 ---
 
+## 🏦 ISO 20022 & SWIFT Integration
+
+On **November 22, 2025**, SWIFT completed its historic "banking reset" — the definitive transition to the **ISO 20022** standard. This transformation integrates blockchain-based ledger technology into the global financial infrastructure, enabling tokenized asset movement across **11,000+ financial institutions worldwide**.
+
+**ATF-AI is perfectly positioned for this new era:**
+
+| Capability | ATF-AI Alignment |
+|------------|------------------|
+| **Rich Data Messaging** | ATF-AI's compliance metadata schema aligns with ISO 20022's structured data requirements |
+| **Tokenized Assets** | Full support for institutional-grade digital asset verification |
+| **Cross-Border Compliance** | Jurisdiction-aware attestations compatible with international regulatory frameworks |
+| **Interoperability** | Seamless integration with SWIFT's new blockchain-enabled infrastructure |
+
+> "The SWIFT ISO 20022 transition marks the beginning of institutional blockchain adoption. ATF-AI provides the compliance layer that makes this integration trustworthy and auditable."
+
+---
+
 ## 🧩 Components
 
 | Module | Description |
@@ -44,6 +63,17 @@ It provides the missing bridge between **digital asset representation (ERC-8040)
 | **/api** | RESTful API — OpenAPI `/verify` endpoint for validation and attestation. |
 | **/docs** | Manifesto, governance policy, and architectural diagrams. |
 | **/examples** | Reference JSON assets and verification scripts. |
+
+---
+
+## 🔗 Ecosystem & Reference Implementations
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **esg-tokenization-protocol** | Reference implementation in Rust for ERC-8040 | [github.com/agronetlabs/esg-tokenization-protocol](https://github.com/agronetlabs/esg-tokenization-protocol) |
+| **Crates.io Package** | Production-ready Rust crate | [crates.io/crates/esg-tokenization-protocol](https://crates.io/crates/esg-tokenization-protocol) |
+| **ERC-8040 Discussion** | Ethereum Magicians Forum | [ethereum-magicians.org](https://ethereum-magicians.org/t/erc-8040-esg-tokenization-protocol/25846) |
+| **Documentation** | Live docs on GitHub Pages | [agronetlabs.github.io/atf-ai](https://agronetlabs.github.io/atf-ai/) |
 
 ---
 
@@ -75,6 +105,7 @@ Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot,
 | API Verify | `api/openapi.yaml` | ✅ Available |
 | CI Validation | `.github/workflows/ci.yml` | ✅ Passing |
 | Pages Docs | `/docs` | 🚀 Published |
+| ISO 20022 Alignment | Schema compatibility | ✅ Ready |
 
 ![Spec CI](https://github.com/agronetlabs/atf-ai/actions/workflows/ci.yml/badge.svg)
 [![GitHub Pages](https://img.shields.io/badge/docs-live-brightgreen)](https://agronetlabs.github.io/atf-ai/)
