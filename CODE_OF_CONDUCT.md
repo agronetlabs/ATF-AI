@@ -40,6 +40,6 @@ Any entity found to violate this Code will be subject to enforcement, including 
 
 ---
 
-> **ATF-AI is the world’s first AI-Governed DAO for ESG Tokenization.**  
+> **ATF-AI is the world’s first AI-Governed DAO for RWA Tokenization.**  
 > We don’t ask for trust — we deliver verifiable truth.
 
