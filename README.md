@@ -97,6 +97,24 @@ Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot,
 
 ---
 
+## 🏆 Governance and Compliance Certifications
+
+The **Autonomous Trust Framework (ATF)** system has been rigorously evaluated and certified to ensure a high standard of governance, transparency, and institutional trust for digital and real-world assets.
+
+<br>
+
+<div align="center">
+  <img src="assets/certificates/certificado-atf-1.png" alt="ATF Governance and Compliance Certificate - First Certification" width="80%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="assets/certificates/certificado-atf-2.png" alt="ATF Governance and Compliance Certificate - Second Certification" width="80%">
+</div>
+
+---
+
 ## 🧪 Development Status
 
 | Stage | Component | Status |
