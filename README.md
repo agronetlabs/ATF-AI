@@ -104,13 +104,13 @@ The **Autonomous Trust Framework (ATF)** system has been rigorously evaluated an
 <br>
 
 <div align="center">
-  <img src="assets/certificates/certificado-atf-1.png" alt="ATF Governance and Compliance Certificate - First Certification" width="80%">
+  <img src="assets/certificates/imagem.png" alt="ATF Governance and Compliance Certificate" width="80%">  
 </div>
 
 <br>
 
 <div align="center">
-  <img src="assets/certificates/certificado-atf-2.png" alt="ATF Governance and Compliance Certificate - Second Certification" width="80%">
+  <img src="assets/certificates/imagem2.png" alt="ATF Governance and Compliance Certificate" width="80%">  
 </div>
 
 ---
