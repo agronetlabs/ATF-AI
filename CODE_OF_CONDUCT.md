@@ -16,7 +16,7 @@ Participants are required to submit data in structured formats that allow crypto
 ---
 
 ### 3. Zero Tolerance for Greenwashing  
-Greenwashing practices, misleading sustainability claims, or unverifiable ESG projects are strictly prohibited. The ATF-AI enforces transparent and evidence-based ESG disclosure.
+Greenwashing practices, misleading sustainability claims, or unverifiable ESG projects are strictly prohibited. The ATF-AI enforces transparent and evidence-based compliance disclosure.
 
 ---
 
@@ -42,4 +42,5 @@ Any entity found to violate this Code will be subject to enforcement, including 
 
 > **ATF-AI is the world’s first AI-Governed DAO for RWA Tokenization.**  
 > We don’t ask for trust — we deliver verifiable truth.
+
 
