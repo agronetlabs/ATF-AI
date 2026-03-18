@@ -1,11 +1,3 @@
-[![ISO 20022 Compatible](https://img.shields.io/badge/ISO%2020022-Compatible-00a651?style=for-the-badge&logo=swift&logoColor=white)](https://www.iso20022.org/)
-[![SWIFT Ready](https://img.shields.io/badge/SWIFT-Ready-ff6600?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
-[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/atf-ai)
-[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/atf-ai)
-[![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
-[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
-[![Pull Shark](https://img.shields.io/badge/PULL--SHARK-ACTIVE-0066ff?style=for-the-badge&logo=github)](https://github.com/agronetlabs/AgroPay)
-
 [![Crates.io](https://img.shields.io/crates/v/agrocrypto-core.svg)](https://crates.io/crates/agrocrypto-core)
 [![License: MIT OR Apache-2.0](https://img.shields.io/crates/l/agrocrypto-core)](https://opensource.org/licenses)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
@@ -14,55 +6,60 @@
 ![Deployed](https://img.shields.io/badge/deployed-Cloudflare-orange)
 ![Deployed](https://img.shields.io/badge/deployed-OpenAI-black)
 
+[![ISO 20022 Compatible](https://img.shields.io/badge/ISO%2020022-Compatible-00a651?style=for-the-badge&logo=swift&logoColor=white)](https://www.iso20022.org/)
+[![SWIFT Ready](https://img.shields.io/badge/SWIFT-Ready-ff6600?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
+[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/atf-ai)
+[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/atf-ai)
+[![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
+[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
+
+[![Crates.io](https://img.shields.io/crates/v/agrocrypto-core.svg)](https://crates.io/crates/agrocrypto-core)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Status](https://img.shields.io/badge/project-Verified%20AI%20Infra-orange)
+
 ---
 
-# ATF-AI — Open Compliance Protocol (ERC-8040)
+# ATF-AI — Autonomous Trust Framework
 
-> **Compliance-as-a-Service Protocol.**  
-> Fully aligned with ERC-8040 and governed by a certified AI-based DAO for institutional-grade digital compliance, auditability, and asset legitimacy.
+> **Base-Layer AI Infrastructure & Autonomous Agent Ecosystem.**  
+> Built for high-performance, decentralized governance, and institutional-grade digital trust.
 
-**Purpose.** AI-driven digitalization of financial assets with built-in compliance, auditability, and interoperability — fully aligned to **ERC-8040**.  
-**Model.** A **free and open protocol** for adoption by enterprises, governments, and technology providers.  
-Certified implementations are **coordinated by AgroNet Labs** under the **(ATF-AI: Autonomus Trust Framework) (ATF-AI)**.
-
+**Purpose.** ATF-AI is a sovereign, AI-driven framework designed to coordinate autonomous agents, validate complex workflows, and establish machine-readable compliance layers. 
+**Model.** A **free and open architecture** coordinated by **AgroNet Labs**. It operates independently but is fully capable of interacting with and validating public standards like ERC-8040, ISO 20022, and beyond.
 
 ---
 
 ## 🌍 Vision
 
-ATF-AI establishes a **machine-readable layer of financial compliance** — allowing any asset, registry, or institution to prove legitimacy and origin on-chain or off-chain.  
-It provides the missing bridge between **digital asset representation (ERC-8040)** and **institutional governance**.
+ATF-AI establishes an intelligent, decentralized governance layer. We are moving beyond simple smart contracts into **Agent-to-Agent (A2A)** and AI-driven networks, allowing any system, registry, or institution to prove legitimacy, provenance, and operational integrity cryptographically.
 
 > “The wheel already exists.  
-> We’re adding the **axle, steering, and brakes** — with AI, compliance, and interoperability.”
+> We’re adding the **autonomous navigation, verifiable provenance, and AI governance**.”
 
 ---
 
-## 🏦 ISO 20022 & SWIFT Integration
+## 🏦 Institutional & Blockchain Integration
 
-On **November 22, 2025**, SWIFT completed its historic "banking reset" — the definitive transition to the **ISO 20022** standard. This transformation integrates blockchain-based ledger technology into the global financial infrastructure, enabling tokenized asset movement across **11,000+ financial institutions worldwide**.
+ATF-AI bridges the gap between high-performance Web3 infrastructure (built primarily in Rust/C++) and traditional financial compliance (like SWIFT's ISO 20022).
 
-**ATF-AI is perfectly positioned for this new era:**
-
-| Capability | ATF-AI Alignment |
+| Capability | ATF-AI Execution |
 |------------|------------------|
-| **Rich Data Messaging** | ATF-AI's compliance metadata schema aligns with ISO 20022's structured data requirements |
-| **Tokenized Assets** | Full support for institutional-grade digital asset verification |
-| **Cross-Border Compliance** | Jurisdiction-aware attestations compatible with international regulatory frameworks |
-| **Interoperability** | Seamless integration with SWIFT's new blockchain-enabled infrastructure |
-
-> "The SWIFT ISO 20022 transition marks the beginning of institutional blockchain adoption. ATF-AI provides the compliance layer that makes this integration trustworthy and auditable."
+| **Autonomous Governance** | Multi-agent coordination (Qwen, GPT, Copilot) with deterministic validation. |
+| **Rich Data Messaging** | AI-validated metadata schemas aligned with complex institutional requirements. |
+| **Verifiable Provenance** | Cryptographic *in-toto* statements and OTel tracing for every AI action. |
+| **Protocol Agnostic** | Capable of supporting ERC-8040 and other sovereign blockchain standards. |
 
 ---
 
-## 🧩 Components
+## ⚙️ Core Architecture
 
-| Module | Description |
-|---------|--------------|
-| **/specs** | Core specification — ERC-8040-ATF schema (v1.0), registry, and compliance data model. |
-| **/api** | RESTful API — OpenAPI `/verify` endpoint for validation and attestation. |
-| **/docs** | Manifesto, governance policy, and architectural diagrams. |
-| **/examples** | Reference JSON assets and verification scripts. |
+The ATF-AI protocol operates through a rigorous, high-performance stack:
+
+1. **Agent Layer** — Autonomous AI agents performing logic, synthesis, and code generation.
+2. **Governance Layer** — Deterministic validation, cryptographic provenance, and zero-trust verification.  
+3. **Execution Layer** — High-speed infrastructure executing validated workflows across decentralized networks.
+
+*Our implementation is continuously extended with state-of-the-art AI validators for semantic, security, and jurisdictional compliance checks.*
 
 ---
 
@@ -70,63 +67,24 @@ On **November 22, 2025**, SWIFT completed its historic "banking reset" — the d
 
 | Project | Description | Link |
 |---------|-------------|------|
-| **esg-tokenization-protocol** | Reference implementation in Rust for ERC-8040 | [github.com/agronetlabs/esg-tokenization-protocol](https://github.com/agronetlabs/esg-tokenization-protocol) |
+| **esg-tokenization-protocol** | Reference implementation in Rust | [github.com/agronetlabs/esg-tokenization-protocol](https://github.com/agronetlabs/esg-tokenization-protocol) |
 | **Crates.io Package** | Production-ready Rust crate | [crates.io/crates/esg-tokenization-protocol](https://crates.io/crates/esg-tokenization-protocol) |
-| **ERC-8040 Discussion** | Ethereum Magicians Forum | [ethereum-magicians.org](https://ethereum-magicians.org/t/erc-8040-esg-tokenization-protocol/25846) |
 | **Documentation** | Live docs on GitHub Pages | [agronetlabs.github.io/atf-ai](https://agronetlabs.github.io/atf-ai/) |
 
 ---
 
-## ⚙️ Architecture
-
-The ATF-AI protocol operates in **three layers**:
-
-1. **Descriptor Layer (EIP-8040)** — Defines digital asset metadata.  
-2. **Compliance Layer (ATF-AI)** — Adds attestations, provenance, and jurisdiction context.  
-3. **Verification Layer (ATF-AI Verify API)** — Performs validation and digital signature (JWS).
-
-Each implementation can be extended with **AI validators** (e.g. GPT-5, Copilot, Gemma, LLama, Deep Seek, Qwen, models) for semantic and jurisdictional compliance checks.
-
----
-
-## 🔒 Governance
+## 🔒 Governance & Certifications
 
 - Open, AI-assisted **DAO governance** for validation and certification.  
-- Coordinated through **AgroNet Labs**, following the **(ATF-AI: Autonomus Trust Framework (ATF)**.  
-- Institutional integration available via **ISIN**, **LEI**, and **OIDC/JWT** standards.
-
----
-
-## 🏆 Governance and Compliance Certifications
-
-The **Autonomous Trust Framework (ATF)** system has been rigorously evaluated and certified to ensure a high standard of governance, transparency, and institutional trust for digital and real-world assets.
+- Coordinated through **AgroNet Labs**, strictly following the **Autonomous Trust Framework (ATF)**.  
 
 <br>
-
 <div align="center">
-  <img src="assets/certificates/imagem.png" alt="ATF Governance and Compliance Certificate" width="80%">  
+  <img src="assets/certificates/imagem.png" alt="ATF Governance Certificate" width="80%">  
+  <br><br>
+  <img src="assets/certificates/imagem2.png" alt="ATF Compliance Certificate" width="80%">  
 </div>
-
 <br>
-
-<div align="center">
-  <img src="assets/certificates/imagem2.png" alt="ATF Governance and Compliance Certificate" width="80%">  
-</div>
-
----
-
-## 🧪 Development Status
-
-| Stage | Component | Status |
-|--------|------------|--------|
-| Spec v1.0 | `specs/erc-8040-atf.schema.json` | ✅ Stable |
-| API Verify | `api/openapi.yaml` | ✅ Available |
-| CI Validation | `.github/workflows/ci.yml` | ✅ Passing |
-| Pages Docs | `/docs` | 🚀 Published |
-| ISO 20022 Alignment | Schema compatibility | ✅ Ready |
-
-![Spec CI](https://github.com/agronetlabs/atf-ai/actions/workflows/ci.yml/badge.svg)
-[![GitHub Pages](https://img.shields.io/badge/docs-live-brightgreen)](https://agronetlabs.github.io/atf-ai/)
 
 ---
 
@@ -141,6 +99,5 @@ Implementation and certification trademarks remain under **AgroNet Labs** govern
 
 **AgroNet Labs LLC**  
 <https://agronet.ai>  
-<https://agronet.bio>  
-**E-mail:** admin@agronet.io
-Telegram @agronetlabs
+**E-mail:** admin@agronet.io  
+Telegram: @agronetlabs
