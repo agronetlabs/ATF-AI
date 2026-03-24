@@ -1,0 +1,7 @@
+{
+    "network": "base-sepolia",
+    "chainId": 84532,
+    "rpcUrl": "${BASE_SEPOLIA_RPC_URL}",
+    "explorerUrl": "https://sepolia.basescan.org",
+    "verifyApiUrl": "https://api-sepolia.basescan.org/api"
+}
