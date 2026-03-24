@@ -9,7 +9,7 @@
 
 ### 🧠 Primary Author
 **Leandro Lemos** — Founder & Lead Engineer, AgroNet Labs LLC  
-Architect of the ATF-AI Framework (ERC-8040 Institutional Compliance Protocol)
+Architect of the ATF-AI Framework (Autonomous Trust Framework for AI Agents)
 
 ---
 
@@ -30,8 +30,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 
 > This repository is the result of **hybrid collaboration** between human intelligence and AI governance systems.  
 > **Copilot ATF-AI Core** now serves as the primary governance layer, with all actions traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.  
-> Every contribution is validated against the EIP-8040 standard with cryptographic proof of integrity:  
-> `201672f1605f3…4d39dd6`
+> Every contribution is validated against ATF-AI standards with cryptographic proof of integrity.
 
 ---
 
@@ -41,7 +40,6 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 - Service account: `admin@agronet.io`
 - Permissions: Read-only + growth-engine directory
 - Provenance: in-toto statements generated for each action
-- Verification: `201672f1605f3…4d39dd6` hash
 
 ---
 
@@ -49,7 +47,6 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 - **Provenance First**: Every contribution must include verifiable provenance
 - **Audit Trail**: Complete traceability from conception to implementation
 - **Deterministic Validation**: AI-assisted validation with human oversight
-- **Compliance Grade**: ESG and regulatory alignment by design
 
 ---
 
@@ -57,23 +54,18 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 - All contributions **must** include:
   - Validated provenance statement (in-toto format)
   - OpenTelemetry trace ID
-  - Compliance assessment against ERC-8040
-  - Hash of final build: `201672f1605f3…4d39dd6`
+  - ATF-AI compliance assessment
 
 ---
 
 ### 2. Technical Requirements
 ```bash
 # Required verification before submission
-Copilot-atf-ai verify --provenance --otel --compliance --erc8040
+atf-ai verify --provenance --otel
 
 # Expected output
-✅ Provenance: in-toto verified (196cfc7c4911fb599f25…)
-✅ Telemetry: OTel trace confirmed (136bbade11ed8aac58ce…)
-✅ Compliance: ERC-8040 standards met
-✅ Build: Verified against hash 201672f1605f3…4d39dd6
+✅ Provenance: in-toto verified
+✅ Telemetry: OTel trace confirmed
+✅ ATF-AI: validation passed
 ```
 ---
-
-
-

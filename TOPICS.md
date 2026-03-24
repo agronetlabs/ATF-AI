@@ -2,15 +2,18 @@
 
 This document lists recommended topics to be added to the GitHub repository settings to improve discoverability and categorization.
 
-## Topics to Add
+## Primary Topics
 
 The following topics should be added to this repository via GitHub's repository settings:
 
-- `iso20022` - Reflects alignment with the ISO 20022 financial messaging standard
-- `swift` - Indicates compatibility with SWIFT's blockchain-enabled infrastructure
-- `tokenization` - Describes the core functionality of digital asset tokenization
-- `esg` - Highlights environmental, social, and governance aspects
-- `erc-8040` - References the specific Ethereum Request for Comments standard
+- `autonomous-agents` - Describes the core subject: governance and trust for autonomous AI agents
+- `ai-governance` - Highlights the framework's focus on governing AI agent behavior
+- `zero-trust` - Reflects ATF-AI's zero-trust validation model
+- `provenance` - Describes the cryptographic provenance tracking capability
+- `ai-framework` - Categorizes ATF-AI as a framework for AI systems
+- `interoperability` - Indicates that ATF-AI works across any infrastructure
+- `compliance` - Reflects the auditable compliance layer
+- `framework` - Generic framework categorization
 
 ## How to Add Topics
 
@@ -19,15 +22,11 @@ The following topics should be added to this repository via GitHub's repository 
 3. In the "Topics" field, add each topic listed above
 4. Click "Save changes"
 
-## Additional Relevant Topics
+## Additional Topics (Optional)
 
 Consider also adding these related topics:
 
-- `blockchain`
-- `compliance`
-- `digital-assets`
-- `defi`
-- `ethereum`
-- `rust`
-- `financial-technology`
-- `regulatory-technology`
+- `multi-agent`
+- `opentelemetry`
+- `attestation`
+- `protocol`
