@@ -3,7 +3,8 @@
 [![Qwen ATF-AI Core](https://img.shields.io/badge/Qwen-ATF--AI_Core-00aaff?style=for-the-badge&logo=alibabacloud)](https://qwen.ai)
 [![NVIDIA Enterprise](https://img.shields.io/badge/NVIDIA-Enterprise-76b900?style=for-the-badge&logo=nvidia)](https://developer.nvidia.com/enterprise)
 [![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
-[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-Active-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Cloudflare Workers AI](https://img.shields.io/badge/Cloudflare%20Workers%20AI-granite--4.0--h--micro-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers-ai/)
 
 # 🧩 Contributors Recognition
 
@@ -20,9 +21,10 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 | ID | AI System | Function | Governance |
 |----|------------|-----------|-------------|
 | AI-000 | **Qwen ATF-AI Core** | Architecture design & documentation synthesis | ATF-AI Verified |
-| AI-001 | **OpenAI GPT-5** | Primary governance layer, protocol validation, institutional compliance | ATF-AI Verified |
+| AI-001 | **Google Gemini** | Primary governance layer, protocol validation, institutional compliance | ATF-AI Verified |
 | AI-002 | **GitHub Copilot** | Code generation & CI/CD automation | ATF-AI Verified |
 | AI-003 | **NVIDIA Triton** | AI inference validation & compliance auditing | NVIDIA Enterprise Verified |
+| AI-004 | **Cloudflare Workers AI** (`@cf/ibm-granite/granite-4.0-h-micro`) | Edge inference & lightweight validation layer | ATF-AI Verified |
 
 ---
 
@@ -68,4 +70,3 @@ atf-ai verify --provenance --otel
 ✅ Telemetry: OTel trace confirmed
 ✅ ATF-AI: validation passed
 ```
----
