@@ -1,0 +1,11 @@
+{
+    "network": "sepolia",
+    "chainId": 11155111,
+    "rpcUrl": "${SEPOLIA_RPC_URL}",
+    "explorerUrl": "https://sepolia.etherscan.io",
+    "verifyApiUrl": "https://api-sepolia.etherscan.io/api",
+    "contracts": {
+        "usdt_mock": "0x...",
+        "usdc_mock": "0x..."
+    }
+}
