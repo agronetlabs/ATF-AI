@@ -2,9 +2,26 @@
 [![Python Tests](https://img.shields.io/badge/Python%20Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=python)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-10%2F10%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![Settlement Live](https://img.shields.io/badge/Settlement-Live%20%E2%9C%85-brightgreen?style=for-the-badge)](https://github.com/agronetlabs/backend)
-[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge)](https://github.com/agronetlabs/ATF-AI)
-[![SWIFT ISO 20022](https://img.shields.io/badge/SWIFT-ISO%2020022-orange?style=for-the-badge)]()
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+
+[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge)](https://github.com/agronetlabs/ATF-AI)
+[![ERC-8040](https://img.shields.io/badge/ERC--8040-Compliant-0066ff?style=for-the-badge)](https://github.com/agronetlabs/erc-8040-ecosystem)
+[![SWIFT ISO 20022](https://img.shields.io/badge/SWIFT-ISO%2020022-orange?style=for-the-badge)]()
+[![PWA](https://img.shields.io/badge/PWA-Installable-purple?style=for-the-badge)]()
+[![Launch](https://img.shields.io/badge/Launch-Q2%202026-red?style=for-the-badge)]()
+
+[![ISO 20022 Compatible](https://img.shields.io/badge/ISO%2020022-Compatible-00a651?style=for-the-badge&logo=swift&logoColor=white)](https://www.iso20022.org/)
+[![SWIFT Ready](https://img.shields.io/badge/SWIFT-Ready-ff6600?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
+[![ATF-AI Adapter](https://img.shields.io/badge/ATF--AI-ADAPTER-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/ATF-AI)
+[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/ATF-AI)
+[![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
+[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
+
+[![License: MIT OR Apache-2.0](https://img.shields.io/crates/l/esg-tokenization-protocol)](https://opensource.org/licenses)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Status](https://img.shields.io/badge/project-Verified%20Blockchain%20Infra-orange)
+![Deployed](https://img.shields.io/badge/deployed-Cloudflare-orange)
+![Deployed](https://img.shields.io/badge/deployed-OpenAI-black)
 
 ---
 
