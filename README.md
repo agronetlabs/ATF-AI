@@ -1,3 +1,4 @@
+﻿[![AI Co-Pilot: OpenClaw](https://img.shields.io/badge/AI%20Co--Pilot-OpenClaw-FF4500?style=for-the-badge&logo=github)](https://openclaw.ai)
 [![Rust Tests](https://img.shields.io/badge/Rust%20Tests-31%2F31%20Passing-brightgreen?style=for-the-badge&logo=rust)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![Python Tests](https://img.shields.io/badge/Python%20Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=python)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-10%2F10%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
@@ -25,51 +26,51 @@
 
 ---
 
-# ATF-AI — Autonomous Trust Framework
+# ATF-AI â€” Autonomous Trust Framework
 
-> *Verifiable provenance, deterministic governance, and zero-trust validation — for any agent, on any infrastructure.*
+> *Verifiable provenance, deterministic governance, and zero-trust validation â€” for any agent, on any infrastructure.*
 
 **Purpose.** ATF-AI is a universal, infrastructure-agnostic framework that answers the question:
-> *"How do AI agents prove they are trustworthy, traceable, and auditable — regardless of the underlying infrastructure?"*
+> *"How do AI agents prove they are trustworthy, traceable, and auditable â€” regardless of the underlying infrastructure?"*
 
-**Model.** A **free and open protocol** coordinated by **AgroNet Labs**. Blockchain, cloud, IoT, enterprise, and any other execution environment can implement ATF-AI as a trust layer — independently, without coupling to any specific technology stack.
+**Model.** A **free and open protocol** coordinated by **AgroNet Labs**. Blockchain, cloud, IoT, enterprise, and any other execution environment can implement ATF-AI as a trust layer â€” independently, without coupling to any specific technology stack.
 
 ---
 
-## 🌍 Vision
+## ðŸŒ Vision
 
-ATF-AI establishes a governance and trust layer for autonomous agents — decoupled from any specific infrastructure. Any system that needs to prove the legitimacy, provenance, and operational integrity of AI-driven actions can implement ATF-AI.
+ATF-AI establishes a governance and trust layer for autonomous agents â€” decoupled from any specific infrastructure. Any system that needs to prove the legitimacy, provenance, and operational integrity of AI-driven actions can implement ATF-AI.
 
 > "The wheel already exists.  
 > We're adding **autonomous navigation, verifiable provenance, and deterministic governance**."
 
 ---
 
-## ⚙️ Core Architecture
+## âš™ï¸ Core Architecture
 
 The ATF-AI protocol operates through three infrastructure-agnostic layers:
 
-1. **Agent Layer** — Autonomous AI agents performing logic, synthesis, validation, and orchestration tasks.
-2. **Governance Layer** — Deterministic validation, cryptographic provenance, and zero-trust verification of every agent action.
-3. **Execution Layer** — Protocol-agnostic infrastructure executing validated workflows across any runtime environment.
+1. **Agent Layer** â€” Autonomous AI agents performing logic, synthesis, validation, and orchestration tasks.
+2. **Governance Layer** â€” Deterministic validation, cryptographic provenance, and zero-trust verification of every agent action.
+3. **Execution Layer** â€” Protocol-agnostic infrastructure executing validated workflows across any runtime environment.
 
-*Any system — cloud, on-premise, decentralized, or embedded — can implement these three layers using ATF-AI's open specification.*
+*Any system â€” cloud, on-premise, decentralized, or embedded â€” can implement these three layers using ATF-AI's open specification.*
 
 ---
 
-## 🔑 Core Pillars
+## ðŸ”‘ Core Pillars
 
 | Pillar | Description |
 |--------|-------------|
 | **Verifiable Provenance** | Every agent action is cryptographically signed and traceable via in-toto attestations and OpenTelemetry traces. |
-| **Deterministic Governance** | Validation rules are explicit, reproducible, and auditable — no hidden logic, no opaque decisions. |
+| **Deterministic Governance** | Validation rules are explicit, reproducible, and auditable â€” no hidden logic, no opaque decisions. |
 | **Zero-Trust Validation** | No agent or system is implicitly trusted. Every interaction is verified before execution. |
 
 ---
 
-## 🔌 Integrations & Adapters
+## ðŸ”Œ Integrations & Adapters
 
-ATF-AI is the framework. Specific technology integrations are **optional downstream adapters** — not core dependencies.
+ATF-AI is the framework. Specific technology integrations are **optional downstream adapters** â€” not core dependencies.
 
 | Adapter | Description | Link |
 |---------|-------------|------|
@@ -80,7 +81,7 @@ ATF-AI is the framework. Specific technology integrations are **optional downstr
 
 ---
 
-## 🔒 Governance & Certification
+## ðŸ”’ Governance & Certification
 
 - Open, AI-assisted governance for validation and certification.
 - Coordinated through **AgroNet Labs**, strictly following the **Autonomous Trust Framework (ATF)** specification.
@@ -96,32 +97,32 @@ ATF-AI is the framework. Specific technology integrations are **optional downstr
 
 ---
 
-## ⚖️ License
+## âš–ï¸ License
 
 Openly distributed under **MIT License**.  
 Implementation and certification trademarks remain under **AgroNet Labs** governance.
 
 ---
 
-## ✅ Proof of Build
+## âœ… Proof of Build
 
 **73 tests passing across 4 languages. Zero failures.**
 
 | Component | Language | Tests | Status |
 |-----------|----------|-------|--------|
-| ERC-8040 Core | Rust | 31/31 | ✅ Passing |
-| Python SDK | Python 3.12 | 30/30 | ✅ Passing |
-| C++ SDK | C++17 | 2/2 | ✅ Passing |
-| Backend (Settlement) | Rust/Axum | 10/10 | ✅ Passing |
-| **Total** | | **73/73** | **✅ Zero failures** |
+| ERC-8040 Core | Rust | 31/31 | âœ… Passing |
+| Python SDK | Python 3.12 | 30/30 | âœ… Passing |
+| C++ SDK | C++17 | 2/2 | âœ… Passing |
+| Backend (Settlement) | Rust/Axum | 10/10 | âœ… Passing |
+| **Total** | | **73/73** | **âœ… Zero failures** |
 
-### ATF-AI Audit Hash — Live Settlement
+### ATF-AI Audit Hash â€” Live Settlement
 
 ![ATF-AI Settlement Live](assets/proof/atf-ai-audit-hash-live.jpg)
 
 `ATF-AI-AUDIT-{SHA256}` generated automatically on every settlement operation.
 
-### Backend Build — All Tests Passing
+### Backend Build â€” All Tests Passing
 
 ![Backend Build Passing](assets/proof/backend-build-passing.jpg)
 
@@ -129,9 +130,10 @@ Clean Rust build, 10/10 unit tests passing, server live.
 
 ---
 
-## 📬 Contact
+## ðŸ“¬ Contact
 
 **AgroNet Labs LLC**  
 <https://agronet.ai>  
 **E-mail:** admin@agronet.io  
 Telegram: @agronetlabs
+
