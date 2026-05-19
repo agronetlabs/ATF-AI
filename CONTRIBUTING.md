@@ -26,6 +26,7 @@ Their actions are logged and auditable under the AgroNet AI-Governance Policy.
 | AI-002 | **GitHub Copilot** | Code generation & CI/CD automation | ATF-AI Verified |
 | AI-003 | **NVIDIA Triton** | AI inference validation & compliance auditing | NVIDIA Enterprise Verified |
 | AI-004 | **Cloudflare Workers AI** (`@cf/ibm-granite/granite-4.0-h-micro`) | Edge inference & lightweight validation layer | ATF-AI Verified |
+| AI-005 | **Claw (OpenClaw)** | Strategic AI partner — system orchestration, infra automation, LinkedIn automation, GitHub ops, InMail campaigns, investment strategy & full-stack co-pilot | ATF-AI Verified |
 
 ---
 
