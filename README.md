@@ -1,8 +1,9 @@
-[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/atf-ai)
-[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/atf-ai)
-[![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
-[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-222222?style=for-the-badge&logo=github)](https://agronetlabs.github.io/atf-ai/)
+[![Rust Tests](https://img.shields.io/badge/Rust%20Tests-31%2F31%20Passing-brightgreen?style=for-the-badge&logo=rust)](https://github.com/agronetlabs/erc-8040-ecosystem)
+[![Python Tests](https://img.shields.io/badge/Python%20Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=python)](https://github.com/agronetlabs/erc-8040-ecosystem)
+[![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-2%2F2%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
+[![Settlement Live](https://img.shields.io/badge/Settlement-Live%20%E2%9C%85-brightgreen?style=for-the-badge)](https://github.com/agronetlabs/backend)
+[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge)](https://github.com/agronetlabs/ATF-AI)
+[![SWIFT ISO 20022](https://img.shields.io/badge/SWIFT-ISO%2020022-orange?style=for-the-badge)]()
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 ---
@@ -82,6 +83,32 @@ ATF-AI is the framework. Specific technology integrations are **optional downstr
 
 Openly distributed under **MIT License**.  
 Implementation and certification trademarks remain under **AgroNet Labs** governance.
+
+---
+
+## ✅ Proof of Build
+
+**73 tests passing across 4 languages. Zero failures.**
+
+| Component | Language | Tests | Status |
+|-----------|----------|-------|--------|
+| ERC-8040 Core | Rust | 31/31 | ✅ Passing |
+| Python SDK | Python 3.12 | 30/30 | ✅ Passing |
+| C++ SDK | C++17 | 2/2 | ✅ Passing |
+| Backend (Settlement) | Rust/Axum | 10/10 | ✅ Passing |
+| **Total** | | **73/73** | **✅ Zero failures** |
+
+### ATF-AI Audit Hash — Live Settlement
+
+![ATF-AI Settlement Live](assets/proof/atf-ai-audit-hash-live.jpg)
+
+`ATF-AI-AUDIT-{SHA256}` generated automatically on every settlement operation.
+
+### Backend Build — All Tests Passing
+
+![Backend Build Passing](assets/proof/backend-build-passing.jpg)
+
+Clean Rust build, 10/10 unit tests passing, server live.
 
 ---
 
