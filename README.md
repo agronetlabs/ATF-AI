@@ -33,7 +33,7 @@
 **Purpose.** ATF-AI is a universal, infrastructure-agnostic framework that answers the question:
 > *"How do AI agents prove they are trustworthy, traceable, and auditable regardless of the underlying infrastructure?"*
 
-**Model.** A **free and open protocol** coordinated by **AgroNet Labs**. Blockchain, cloud, IoT, enterprise, and any other execution environment can implement ATF-AI as a trust layer â€” independently, without coupling to any specific technology stack.
+**Model.** A **free and open protocol** coordinated by **AgroNet Labs**. Blockchain, cloud, IoT, enterprise, and any other execution environment can implement ATF-AI as a trust layer independently, without coupling to any specific technology stack.
 
 ---
 
