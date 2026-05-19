@@ -26,7 +26,7 @@
 
 ---
 
-# ATF-AI â€” Autonomous Trust Framework
+# ATF-AI Autonomous Trust Framework
 
 > *Verifiable provenance, deterministic governance, and zero-trust validation â€” for any agent, on any infrastructure.*
 
