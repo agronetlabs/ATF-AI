@@ -1,6 +1,6 @@
 [![Rust Tests](https://img.shields.io/badge/Rust%20Tests-31%2F31%20Passing-brightgreen?style=for-the-badge&logo=rust)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![Python Tests](https://img.shields.io/badge/Python%20Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=python)](https://github.com/agronetlabs/erc-8040-ecosystem)
-[![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-2%2F2%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
+[![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-10%2F10%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
 [![Settlement Live](https://img.shields.io/badge/Settlement-Live%20%E2%9C%85-brightgreen?style=for-the-badge)](https://github.com/agronetlabs/backend)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
