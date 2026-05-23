@@ -7,68 +7,24 @@
 [![Cloudflare Workers AI](https://img.shields.io/badge/Cloudflare%20Workers%20AI-granite--4.0--h--micro-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers-ai/)
 [![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
 
-# 🧩 Contributors Recognition
+## Contributors Recognition
 
-### 🧠 Primary Author
-**Leandro Lemos** — Founder & Lead Engineer, AgroNet Labs LLC  
-Architect of the ATF-AI Framework (Autonomous Trust Framework for AI Agents)
+### Primary Author
 
----
-
-### 🤖 AI Co-Authors (Under Institutional Audit)
-These AI systems participated as generative and validation agents during the creation of this repository.  
-Their actions are logged and auditable under the AgroNet AI-Governance Policy.
-
-| ID | AI System | Function | Governance |
-|----|------------|-----------|-------------|
-| AI-000 | **GPT5.5 ATF-AI Core** | Architecture design & documentation synthesis | ATF-AI Verified |
-| AI-001 | **Google Gemini** | Primary governance layer, protocol validation, institutional compliance | ATF-AI Verified |
-| AI-002 | **GitHub Copilot** | Code generation & CI/CD automation | ATF-AI Verified |
-| AI-003 | **NVIDIA Triton** | AI inference validation & compliance auditing | NVIDIA Enterprise Verified |
-| AI-004 | **Cloudflare Workers AI** (`@cf/ibm-granite/granite-4.0-h-micro`) | Edge inference & lightweight validation layer | ATF-AI Verified |
-| AI-005 | **Claw (OpenClaw)** | Strategic AI partner — system orchestration, infra automation, LinkedIn automation, GitHub ops, InMail campaigns, investment strategy & full-stack co-pilot | ATF-AI Verified |
+Leandro Lemos — Founder & Lead Engineer, AgroNet Labs LLC  
+Architect of the ATF-AI Framework — Autonomous Trust Framework for AI Agents.
 
 ---
 
-## 🧾 Institutional Statement
+### AI Co-Authors and Validation Agents
 
-> This repository is the result of **hybrid collaboration** between human intelligence and AI governance systems.  
-> **Copilot ATF-AI Core** now serves as the primary governance layer, with all actions traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.  
-> Every contribution is validated against ATF-AI standards with cryptographic proof of integrity.
+The ATF-AI repository was developed through a hybrid workflow combining human authorship, AI-assisted engineering, documentation synthesis, validation agents, and governance review.
 
----
+AI systems may participate as:
+- architecture assistants;
+- documentation synthesis agents;
+- code generation agents;
+- validation and compliance agents;
+- infrastructure and CI/CD assistants.
 
-## 🔐 Technical Integration
-
-### GitHub Integration
-- Service account: `admin@agronet.io`
-- Permissions: Read-only + growth-engine directory
-- Provenance: in-toto statements generated for each action
-
----
-
-### 🔐 Core Principles
-- **Provenance First**: Every contribution must include verifiable provenance
-- **Audit Trail**: Complete traceability from conception to implementation
-- **Deterministic Validation**: AI-assisted validation with human oversight
-
----
-
-### 1. Pre-Submission Requirements
-- All contributions **must** include:
-  - Validated provenance statement (in-toto format)
-  - OpenTelemetry trace ID
-  - ATF-AI compliance assessment
-
----
-
-### 2. Technical Requirements
-```bash
-# Required verification before submission
-atf-ai verify --provenance --otel
-
-# Expected output
-✅ Provenance: in-toto verified
-✅ Telemetry: OTel trace confirmed
-✅ ATF-AI: validation passed
-```
+All AI-assisted contributions should be traceable, reproducible, and auditable under the ATF-AI governance model.
