@@ -18,7 +18,7 @@ Architect of the ATF-AI Framework — Autonomous Trust Framework for AI Agents.
 
 ### AI Co-Authors and Validation Agents
 
-The ATF-AI repository was developed through a hybrid workflow combining human authorship, AI-assisted engineering, documentation synthesis, validation agents, and governance review.
+> ATF-AI Core serves as the primary governance layer for AI-assisted contributions, with actions designed to be traceable, reproducible, and verifiable within the AgroNet Labs ATF-AI framework.
 
 AI systems may participate as:
 - architecture assistants;
