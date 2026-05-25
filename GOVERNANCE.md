@@ -1,6 +1,6 @@
 # ATF-AI Governance
 
-This document describes the governance model for the **ATF-AI — Autonomous Trust Framework**. ATF-AI is an open protocol coordinated by **AgroNet Labs**, but the framework itself is infrastructure-neutral and independent of any specific technology stack.
+This document describes the governance model for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)**. ATF-AI is an open protocol coordinated by **AgroNet Labs**, but the framework itself is infrastructure-neutral and independent of any specific technology stack.
 
 ---
 

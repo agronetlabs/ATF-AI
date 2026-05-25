@@ -1,4 +1,4 @@
-# ATF-AI — Autonomous Trust Framework
+# ATF-AI: Autonomous Trust Framework for Artificial Intelligence
 
 This site publishes the public documentation for the ATF-AI protocol.
 

@@ -26,7 +26,7 @@
 
 ---
 
-# ATF-AI Autonomous Trust Framework
+# ATF-AI: Autonomous Trust Framework for Artificial Intelligence
 
 > *Verifiable provenance, deterministic governance, and zero-trust validation for any agent, on any infrastructure.*
 
@@ -84,7 +84,7 @@ ATF-AI is the framework. Specific technology integrations are **optional downstr
 ## Governance & Certification
 
 - Open, AI-assisted governance for validation and certification.
-- Coordinated through **AgroNet Labs**, strictly following the **Autonomous Trust Framework (ATF)** specification.
+- Coordinated through **AgroNet Labs**, strictly following the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)** specification.
 - See [GOVERNANCE.md](./GOVERNANCE.md) for full governance model.
 
 <br>

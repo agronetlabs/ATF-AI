@@ -1,6 +1,6 @@
 # Security Policy
 
-This document describes the security policy for the **ATF-AI — Autonomous Trust Framework** specification and its reference artifacts.
+This document describes the security policy for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)** specification and its reference artifacts.
 
 ---
 
