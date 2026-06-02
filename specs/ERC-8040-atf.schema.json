@@ -1,30 +1,78 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "ERC-8040-ATF Asset Descriptor",
+  "description": "Descriptor for an ERC-8040 asset anchored to ATF-AI provenance, compliance attestations, and ledger references.",
   "type": "object",
-  "required": ["asset_id","issuer","jurisdiction","compliance","provenance","ledger"],
+  "required": ["asset_id", "issuer", "jurisdiction", "compliance", "provenance", "ledger"],
+  "additionalProperties": false,
   "properties": {
-    "asset_id": {"type":"string","format":"uri"},
-    "issuer": {"type":"string"},
-    "jurisdiction": {"type":"string","pattern":"^[A-Z]{2}$"},
+    "asset_id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Stable asset identifier, preferably a DID or resolvable URI."
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Issuer identifier, such as a DID or LEI."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 jurisdiction code."
+    },
     "compliance": {
-      "type":"object",
-      "required":["attestations"],
-      "properties":{"attestations":{"type":"array","items":{"type":"string"}}}
+      "type": "object",
+      "required": ["attestations"],
+      "additionalProperties": false,
+      "properties": {
+        "attestations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
     },
     "provenance": {
-      "type":"object",
-      "required":["hash"],
-      "properties":{"hash":{"type":"string","pattern":"^[A-Fa-f0-9]{64}$"}}
+      "type": "object",
+      "required": ["hash"],
+      "additionalProperties": false,
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$",
+          "description": "SHA-256 hash of the provenance payload."
+        }
+      }
     },
     "ledger": {
-      "type":"object",
-      "required":["ref"],
-      "properties":{"ref":{"type":"object","required":["chainId","tx","block"],
-        "properties":{
-          "chainId":{"type":"integer"},
-          "tx":{"type":"string"},
-          "block":{"type":"integer"}
-        }}}}
+      "type": "object",
+      "required": ["ref"],
+      "additionalProperties": false,
+      "properties": {
+        "ref": {
+          "type": "object",
+          "required": ["chainId", "tx", "block"],
+          "additionalProperties": false,
+          "properties": {
+            "chainId": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "tx": {
+              "type": "string",
+              "pattern": "^0x[0-9A-Fa-f]+$"
+            },
+            "block": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
   }
 }

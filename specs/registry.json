@@ -6,8 +6,8 @@
       "asset_id": "did:agronet:carbon-credit-001",
       "issuer": "LEI-5493001KJTIIGC8Y1R12",
       "jurisdiction": "BR",
-      "ledger": { "ref": { "chainId": 1, "tx": "0xabc123...", "block": 12345678 } },
-      "provenance": { "hash": "deadbeef..." },
+      "ledger": { "ref": { "chainId": 1, "tx": "0xabc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abcd", "block": 12345678 } },
+      "provenance": { "hash": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef" },
       "compliance": { "attestations": ["https://atf-ai.agronet.ai/attestations/001"] }
     }
   ]

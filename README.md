@@ -112,9 +112,9 @@ Implementation and certification trademarks remain under **AgroNet Labs** govern
 |-----------|----------|-------|--------|
 | ERC-8040 Core | Rust | 31/31 | Passing |
 | Python SDK | Python 3.12 | 30/30 | Passing |
-| C++ SDK | C++17 | 2/2 | Passing |
+| C++ SDK | C++17 | 10/10 | Passing |
 | Backend (Settlement) | Rust/Axum | 10/10 | Passing |
-| **Total** | | **73/73** | **Zero failures** |
+| **Total** | | **81/81** | **Zero failures** |
 
 ### ATF-AI Audit Hash â€” Live Settlement
 
