@@ -1,28 +1,14 @@
-﻿[![AI Co-Pilot: OpenClaw](https://img.shields.io/badge/AI%20Co--Pilot-OpenClaw-FF4500?style=for-the-badge&logo=github)](https://openclaw.ai)
-[![Rust Tests](https://img.shields.io/badge/Rust%20Tests-31%2F31%20Passing-brightgreen?style=for-the-badge&logo=rust)](https://github.com/agronetlabs/erc-8040-ecosystem)
-[![Python Tests](https://img.shields.io/badge/Python%20Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=python)](https://github.com/agronetlabs/erc-8040-ecosystem)
-[![C++ Tests](https://img.shields.io/badge/C%2B%2B%20Tests-10%2F10%20Passing-brightgreen?style=for-the-badge&logo=cplusplus)](https://github.com/agronetlabs/erc-8040-ecosystem)
-[![Settlement Live](https://img.shields.io/badge/Settlement-Live%20%E2%9C%85-brightgreen?style=for-the-badge)](https://github.com/agronetlabs/backend)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+[![ATF-AI Core](https://img.shields.io/badge/ATF--AI%20Core-v1-2ea44f?style=for-the-badge)](./specs/atf-core-v1.md)
+[![RWA Governance](https://img.shields.io/badge/RWA%20Governance-DRAFT%20v0.1-ff9800?style=for-the-badge)](./specs/adapters/rwa-privileged-governance.md)
+[![Rust CI](https://img.shields.io/badge/Rust%20CI-37%2F37%20Passing-brightgreen?style=for-the-badge&logo=rust)](https://github.com/agronetlabs/ATF-AI/actions)
+[![Schemas](https://img.shields.io/badge/JSON%20Schemas-2%2F2%20Valid-brightgreen?style=for-the-badge)](https://github.com/agronetlabs/ATF-AI/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
 
-[![ATF-AI Verified](https://img.shields.io/badge/ATF--AI-VERIFIED-2ea44f?style=for-the-badge)](https://github.com/agronetlabs/ATF-AI)
-[![ERC-8040](https://img.shields.io/badge/ERC--8040-Compliant-0066ff?style=for-the-badge)](https://github.com/agronetlabs/erc-8040-ecosystem)
-[![SWIFT ISO 20022](https://img.shields.io/badge/SWIFT-ISO%2020022-orange?style=for-the-badge)]()
-[![PWA](https://img.shields.io/badge/PWA-Installable-purple?style=for-the-badge)]()
-[![Launch](https://img.shields.io/badge/Launch-Q2%202026-red?style=for-the-badge)]()
-
-[![ISO 20022 Compatible](https://img.shields.io/badge/ISO%2020022-Compatible-00a651?style=for-the-badge&logo=swift&logoColor=white)](https://www.iso20022.org/)
-[![SWIFT Ready](https://img.shields.io/badge/SWIFT-Ready-ff6600?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
-[![ATF-AI Adapter](https://img.shields.io/badge/ATF--AI-ADAPTER-2ea44f?style=for-the-badge&logo=vercel)](https://github.com/agronetlabs/ATF-AI)
-[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge&logo=oci)](https://github.com/agronetlabs/ATF-AI)
-[![Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
-[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-Active-ff6600?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
-
-[![License: MIT OR Apache-2.0](https://img.shields.io/crates/l/esg-tokenization-protocol)](https://opensource.org/licenses)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![Status](https://img.shields.io/badge/project-Verified%20Blockchain%20Infra-orange)
-![Deployed](https://img.shields.io/badge/deployed-Cloudflare-orange)
-![Deployed](https://img.shields.io/badge/deployed-OpenAI-black)
+[![Provenance Traceable](https://img.shields.io/badge/PROVENANCE-SIGNED-0f9d58?style=for-the-badge)](./docs/concepts/provenance.md)
+[![OpenAI GPT-5.6 Sol](https://img.shields.io/badge/OpenAI-GPT--5.6%20Sol-000000?style=for-the-badge&logo=openai&logoColor=white)](./CONTRIBUTING.md)
+[![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Active-0066ff?style=for-the-badge&logo=githubcopilot)](https://github.com/features/copilot)
+[![ERC-8040 Adapter](https://img.shields.io/badge/ERC--8040-DRAFT%20v0.1-0066ff?style=for-the-badge)](./specs/adapters/erc8040.md)
+[![ISO 20022 Bridge](https://img.shields.io/badge/ISO%2020022-Bridge-00a651?style=for-the-badge)](./docs/integrations/blockchain/swift-bridge.md)
 
 ---
 
@@ -31,15 +17,18 @@
 > *Verifiable provenance, deterministic governance, and zero-trust validation for any agent, on any infrastructure.*
 
 **Purpose.** ATF-AI is a universal, infrastructure-agnostic framework that answers the question:
-> *"How do AI agents prove they are trustworthy, traceable, and auditable regardless of the underlying infrastructure?"*
 
-**Model.** A **free and open protocol** coordinated by **AgroNet Labs**. Blockchain, cloud, IoT, enterprise, and any other execution environment can implement ATF-AI as a trust layer independently, without coupling to any specific technology stack.
+> *How do autonomous agents and governed machine actions prove they are authorized, traceable, and auditable regardless of the underlying infrastructure?*
+
+**Model.** ATF-AI is a **free and open protocol** coordinated by **AgroNet Labs LLC**. Blockchain, cloud, enterprise, IoT, financial infrastructure, and other execution environments can implement ATF-AI without coupling the core protocol to a specific technology vendor.
+
+**Governance.** ATF-AI is **human-governed and AI-assisted**. AI systems may contribute architecture, code, documentation, tests, and security analysis; final protocol authority remains with the human governance process defined in [`GOVERNANCE.md`](./GOVERNANCE.md).
 
 ---
 
 ## Vision
 
-ATF-AI establishes a governance and trust layer for autonomous agents decoupled from any specific infrastructure. Any system that needs to prove the legitimacy, provenance, and operational integrity of AI-driven actions can implement ATF-AI.
+ATF-AI establishes a governance and trust layer for autonomous systems decoupled from any specific infrastructure.
 
 > "The wheel already exists.  
 > We're adding **autonomous navigation, verifiable provenance, and deterministic governance**."
@@ -48,55 +37,68 @@ ATF-AI establishes a governance and trust layer for autonomous agents decoupled 
 
 ## Core Architecture
 
-The ATF-AI protocol operates through three infrastructure-agnostic layers:
+ATF-AI operates through three infrastructure-agnostic layers:
 
-1. **Agent Layer** Autonomous AI agents performing logic, synthesis, validation, and orchestration tasks.
-2. **Governance Layer** Deterministic validation, cryptographic provenance, and zero-trust verification of every agent action.
-3. **Execution Layer** Protocol-agnostic infrastructure executing validated workflows across any runtime environment.
+1. **Agent Layer** — autonomous agents or governed actors perform logic, synthesis, validation, and orchestration.
+2. **Governance Layer** — deterministic policy validates identity, authorization, compliance, provenance, and action eligibility.
+3. **Execution Layer** — infrastructure executes only governance-approved workflows and records the outcome.
 
-*Any system "cloud, on-premise, decentralized, or embedded” can implement these three layers using ATF-AI's open specification.*
+See [`docs/architecture.md`](./docs/architecture.md).
 
 ---
 
 ## Core Pillars
 
 | Pillar | Description |
-|--------|-------------|
-| **Verifiable Provenance** | Every agent action is cryptographically signed and traceable via in-toto attestations and OpenTelemetry traces. |
-| **Deterministic Governance** | Validation rules are explicit, reproducible, and auditable no hidden logic, no opaque decisions. |
-| **Zero-Trust Validation** | No agent or system is implicitly trusted. Every interaction is verified before execution. |
+|---|---|
+| **Verifiable Provenance** | Governed actions carry traceable evidence and integrity metadata. |
+| **Deterministic Governance** | Rules are explicit, version-controlled, reproducible, and auditable. |
+| **Zero-Trust Validation** | No agent, signer, credential, or system is implicitly trusted. |
+| **Governance / Execution Separation** | Technical signing capability does not automatically create governance authority. |
 
 ---
 
 ## Integrations & Adapters
 
-ATF-AI is the framework. Specific technology integrations are **optional downstream adapters** not core dependencies.
+ATF-AI is the framework. Infrastructure- and domain-specific integrations are adapters, not core dependencies.
 
-| Adapter | Description | Link |
-|---------|-------------|------|
-| **erc-8040-ecosystem** | ATF-AI adapter for blockchain/ESG digital asset workflows | [github.com/agronetlabs/erc-8040-ecosystem](https://github.com/agronetlabs/erc-8040-ecosystem) |
-| **RWA Privileged Action Governance** | Deterministic governance for admin actions, redemption, signer policy, and settlement authorization | [spec](./specs/adapters/rwa-privileged-governance.md) · [guide](./docs/integrations/blockchain/rwa-privileged-governance.md) |
-| **Documentation** | Live docs on GitHub Pages | [agronetlabs.github.io/atf-ai](https://agronetlabs.github.io/atf-ai/) |
+| Adapter | Description | Status | Link |
+|---|---|---|---|
+| **ERC-8040** | Blockchain / ESG digital-asset workflow adapter | DRAFT v0.1 | [`spec`](./specs/adapters/erc8040.md) · [implementation ecosystem](https://github.com/agronetlabs/erc-8040-ecosystem) |
+| **RWA Privileged Action Governance** | Governance for admin actions, redemption, signer changes, oracle/compliance changes, upgrades, and settlement authorization | DRAFT v0.1 | [`spec`](./specs/adapters/rwa-privileged-governance.md) · [`guide`](./docs/integrations/blockchain/rwa-privileged-governance.md) |
 
-> Want to build an ATF-AI adapter for your infrastructure (cloud, IoT, health, fintech, agro)? See [CONTRIBUTING.md](./CONTRIBUTING.md).
+> Want to build an ATF-AI adapter? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
-### RWA Privileged Governance Principle
+---
+
+## RWA Privileged Governance Principle
 
 For institutional digital assets, ATF-AI separates **governance authorization** from **cryptographic execution**:
 
 ```text
-Action Intent -> ATF-AI Policy Validation -> Governance Attestation -> MPC / Multisig / HSM -> Execution
+Action Intent
+    -> ATF-AI Policy Validation
+    -> Governance Attestation
+    -> MPC / Multisig / HSM / Institutional Signer
+    -> Blockchain / Custodian / Settlement Rail
+    -> Execution Receipt + Provenance
 ```
 
-A valid administrator or signer credential is therefore treated as an execution capability — **not, by itself, as sufficient authority** for a high-impact RWA action.
+A valid administrator key, signer credential, MPC share, or HSM capability is therefore an **execution capability — not, by itself, sufficient governance authority** for a high-impact RWA action.
+
+The first reference implementation includes deterministic checks for quorum, required roles, distinct approvers, provenance, compliance attestations, timelocks, and active-redemption protections.
 
 ---
 
 ## Governance & Certification
 
-- Open, AI-assisted governance for validation and certification.
-- Coordinated through **AgroNet Labs**, strictly following the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)** specification.
-- See [GOVERNANCE.md](./GOVERNANCE.md) for full governance model.
+- ATF-AI uses **open protocol development with coordinated human stewardship**.
+- AgroNet Labs coordinates core versioning, adapter recognition, and formal certification decisions.
+- AI tools and models are non-authoritative contributors.
+- **Conformance is not the same as certification.** Formal `ATF-AI Certified` status requires an explicit governance decision.
+- Adapter maturity is explicit; a passing build does not automatically promote a `DRAFT` adapter to `STABLE`.
+
+See [`GOVERNANCE.md`](./GOVERNANCE.md) and [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 <br>
 <div align="center">
@@ -108,36 +110,57 @@ A valid administrator or signer credential is therefore treated as an execution 
 
 ---
 
-## License
+## AI-Assisted Development
 
-Openly distributed under **MIT License**.  
-Implementation and certification trademarks remain under **AgroNet Labs** governance.
+AI participation is disclosed as contribution metadata rather than protocol authority.
+
+As of **2026-08-23**, the OpenAI model used in the current ATF-AI architecture/governance review is **GPT-5.6 Sol**. GitHub Copilot and other AI tools may also assist development.
+
+ATF-AI does **not** depend on GPT-5.6 Sol, OpenAI, GitHub Copilot, or any specific model/vendor. See the attribution and review policy in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ---
 
-## Proof of Build
+## Build & Validation Evidence
 
-**73 tests passing across 4 languages. Zero failures.**
+### Current repository CI — 2026-08-23
 
-| Component | Language | Tests | Status |
-|-----------|----------|-------|--------|
-| ERC-8040 Core | Rust | 31/31 | Passing |
-| Python SDK | Python 3.12 | 30/30 | Passing |
-| C++ SDK | C++17 | 10/10 | Passing |
-| Backend (Settlement) | Rust/Axum | 10/10 | Passing |
-| **Total** | | **81/81** | **Zero failures** |
+The current ATF-AI repository CI validates the RWA-enhanced Rust core and both canonical JSON Schemas:
 
-### ATF-AI Audit Hash — Live Settlement
+| Check | Result |
+|---|---:|
+| Rust unit tests | **31/31 passing** |
+| Rust integration tests | **6/6 passing** |
+| **Current Rust total** | **37/37 passing** |
+| `ERC-8040-atf.schema.json` | **valid** |
+| `atf-rwa-privileged-action.schema.json` | **valid** |
+
+### Extended ecosystem snapshot — 2026-05-18
+
+A prior proof-of-build snapshot recorded **81/81 passing tests** across the broader ERC-8040 Rust/Python/C++ and settlement/backend components at that point in time. Since the RWA governance module adds new Rust tests, that historical total is retained as a dated snapshot rather than presented as the current repository total.
+
+See [`PROOF_OF_BUILD.md`](./PROOF_OF_BUILD.md) for the dated evidence and distinction between current CI and historical ecosystem results.
+
+### ATF-AI Audit Hash — Settlement Evidence
 
 ![ATF-AI Settlement Live](assets/proof/atf-ai-audit-hash-live.jpg)
 
-`ATF-AI-AUDIT-{SHA256}` generated automatically on every settlement operation.
+`ATF-AI-AUDIT-{SHA256}` is generated by the referenced settlement implementation as documented in the proof-of-build snapshot.
 
-### Backend Build All Tests Passing
+### Backend Build Evidence
 
 ![Backend Build Passing](assets/proof/backend-build-passing.jpg)
 
-Clean Rust build, 10/10 unit tests passing, server live.
+---
+
+## Security
+
+Security-sensitive contributions must follow [`SECURITY.md`](./SECURITY.md). Production private keys, seed phrases, MPC shares, HSM secrets, and sensitive signing credentials must never be committed to this repository.
+
+---
+
+## License
+
+Repository content is distributed under the [`MIT License`](./LICENSE). Package-level metadata may declare additional compatible licensing where explicitly stated by that package.
 
 ---
 
@@ -147,4 +170,3 @@ Clean Rust build, 10/10 unit tests passing, server live.
 <https://agronet.ai>  
 **E-mail:** admin@agronet.io  
 Telegram: @agronetlabs
-
