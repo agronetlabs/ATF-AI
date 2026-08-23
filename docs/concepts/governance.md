@@ -2,119 +2,214 @@
 
 ## Overview
 
-The ATF-AI **Governance Model** defines how the protocol itself is maintained, versioned, and evolved — and how authority is distributed between the protocol steward, adapter maintainers, and compliance auditors. Governance in ATF-AI is intentionally separated from implementation: the framework defines the rules, adapters implement them.
+The ATF-AI **Governance Model** defines how the protocol is maintained, versioned, reviewed, and evolved — and how authority is separated between the Protocol Steward, maintainers, adapter maintainers, auditors, and AI-assisted contributors.
+
+ATF-AI governance is intentionally separated from implementation: **the framework defines trust and governance requirements; adapters implement them for specific infrastructures or domains.**
+
+The operational source of truth is [`GOVERNANCE.md`](../../GOVERNANCE.md).
 
 ---
 
 ## Separation of Concerns: Framework vs. Adapters
 
-A core design principle of ATF-AI is that **governance is adapter-agnostic**:
-
-```
-┌─────────────────────────────────────────────────────┐
-│                  ATF-AI Framework                   │
-│   Defines: Governance rules, versioning policy,     │
-│   role definitions, change processes                │
-└──────────────────────┬──────────────────────────────┘
-                       │ implements
-         ┌─────────────┼─────────────┐
-         ▼             ▼             ▼
-  ┌────────────┐ ┌────────────┐ ┌────────────┐
-  │  ERC-8040  │ │  Cloud     │ │  IoT       │
-  │  Adapter   │ │  Adapter   │ │  Adapter   │
-  └────────────┘ └────────────┘ └────────────┘
+```text
++-----------------------------------------------------+
+|                  ATF-AI Framework                   |
+| Governance rules / provenance / versioning /        |
+| decision records / adapter requirements             |
++--------------------------+--------------------------+
+                           |
+                 implements / extends
+          +----------------+----------------+
+          |                |                |
+          v                v                v
+   +-------------+  +-------------+  +-------------+
+   | ERC-8040    |  | RWA         |  | Cloud / IoT |
+   | Adapter     |  | Governance  |  | Adapters    |
+   +-------------+  +-------------+  +-------------+
 ```
 
 This means:
-- The **ATF-AI Governance Model** applies universally to all adapters
-- Adapters can extend governance rules for domain-specific concerns
-- Adapters cannot override core ATF-AI governance constraints
+
+- The **ATF-AI Core Governance Model** applies universally.
+- Adapters MAY extend governance for domain-specific concerns.
+- Adapters MUST NOT override mandatory ATF-AI Core constraints.
+- Adapter maturity is independent from core maturity.
 
 ---
 
 ## Roles
 
-### Protocol Steward — AgroNet Labs (Leandro)
+### Protocol Steward — AgroNet Labs LLC
 
 The Protocol Steward is responsible for:
 
-- Maintaining the canonical ATF-AI specification (`specs/atf-core-v1.md`)
-- Approving breaking changes to the core protocol
-- Publishing official governance decisions via the `GOVERNANCE.md` root file
-- Certifying new adapters as official ATF-AI adapters
-- Managing the Semantic Versioning roadmap
+- maintaining the canonical ATF-AI specification;
+- approving breaking core changes;
+- coordinating versioning and releases;
+- recognizing official adapters;
+- issuing or revoking formal ATF-AI certification;
+- maintaining governance and security records.
 
-**Current Protocol Steward:** AgroNet Labs  
-**Contact:** See [`GOVERNANCE.md`](../../GOVERNANCE.md) in the repository root
+**Current Protocol Steward:** AgroNet Labs LLC  
+**Operational policy:** [`GOVERNANCE.md`](../../GOVERNANCE.md)
+
+### Maintainer
+
+A Maintainer reviews changes, merges Pull Requests, enforces contribution requirements, and protects the consistency of the protocol and reference artifacts.
+
+The canonical GitHub ownership rule is maintained in `.github/CODEOWNERS`.
 
 ### Adapter Maintainer
 
 An Adapter Maintainer is responsible for:
 
-- Implementing and maintaining a specific ATF-AI adapter
-- Ensuring the adapter conforms to the ATF-AI Core Spec
-- Publishing adapter-level governance documentation
-- Responding to security disclosures related to their adapter
+- implementing and maintaining a specific ATF-AI adapter;
+- declaring the compatible ATF-AI Core version;
+- documenting conformance and security requirements;
+- maintaining tests and schemas where applicable;
+- responding to adapter security disclosures.
 
-**Example:** The ERC-8040 Blockchain Adapter is maintained by AgroNet Labs. See [`specs/adapters/erc8040.md`](../../specs/adapters/erc8040.md).
+Examples:
 
-### Compliance Auditor
+- ERC-8040 Blockchain Adapter: [`specs/adapters/erc8040.md`](../../specs/adapters/erc8040.md)
+- RWA Privileged Action Governance Adapter: [`specs/adapters/rwa-privileged-governance.md`](../../specs/adapters/rwa-privileged-governance.md)
 
-A Compliance Auditor is an independent third party (or automated agent) that:
+### Independent Auditor
 
-- Verifies that attestations produced by ATF-AI agents are valid
-- Audits provenance chains for integrity
-- Issues external compliance reports referencing ATF-AI governance records
+An independent auditor may:
 
-Compliance Auditors interact with ATF-AI primarily through the [Attestation](./attestation.md) layer — they do not require direct access to the protocol internals.
+- verify ATF-AI attestations;
+- audit provenance chains;
+- assess security controls and conformance;
+- issue independent reports referencing ATF-AI governance evidence.
+
+Independent assessment does not require protocol governance authority.
+
+### AI-Assisted Contributor
+
+AI systems may materially assist architecture, code, documentation, tests, validation, or security analysis.
+
+They are **non-authoritative contributors**. AI systems do not receive voting rights, merge authority, certification authority, or independent power to approve their own output.
+
+Model/vendor identity is attribution only and is not a protocol dependency.
 
 ---
 
 ## How Protocol Changes Are Governed
 
-ATF-AI follows **Semantic Versioning** (`MAJOR.MINOR.PATCH`) for the core protocol:
+ATF-AI follows Semantic Versioning for the core protocol:
 
-| Version Type | Trigger | Approval Required |
+| Version Type | Trigger | Normal approval path |
 |---|---|---|
-| **PATCH** (`x.x.1`) | Bug fixes, documentation corrections | Protocol Steward review |
-| **MINOR** (`x.1.x`) | New features, new adapter interfaces | Protocol Steward approval + 14-day comment period |
-| **MAJOR** (`2.x.x`) | Breaking changes to core spec | Protocol Steward + community RFC process |
+| **PATCH** (`x.x.1`) | Corrections and non-behavioral clarifications | Maintainer review + applicable CI |
+| **MINOR** (`x.1.x`) | Backward-compatible features or interfaces | Maintainer/Steward approval + public review when material |
+| **MAJOR** (`2.x.x`) | Breaking core changes | Protocol Steward + RFC process |
+| **SECURITY** | Urgent mitigation | Expedited human approval + auditable follow-up record |
 
-### RFC Process for Major Changes
+Normal review targets are:
 
-1. **Proposal** — Author submits an RFC document to the repository
-2. **Discussion** — 30-day public comment period
-3. **Review** — Protocol Steward reviews and responds to comments
-4. **Decision** — Protocol Steward publishes accept/reject decision
-5. **Implementation** — If accepted, changes are scheduled for the next major release
+- **14 days** for material MINOR changes;
+- **30 days** for MAJOR RFCs.
+
+These periods may be shortened for urgent security or operational reasons when the rationale is recorded.
+
+---
+
+## Adapter Lifecycle
+
+Adapters use explicit maturity states:
+
+| Status | Meaning |
+|---|---|
+| `DRAFT` | Design and threat model may change materially. |
+| `REVIEW` | Interface is substantially defined and undergoing external/integration review. |
+| `STABLE` | Versioned conformance surface with compatibility expectations. |
+| `DEPRECATED` | Superseded or no longer recommended. |
+
+Current examples as of **2026-08-23**:
+
+- ERC-8040 Blockchain Adapter — `DRAFT v0.1`
+- RWA Privileged Action Governance Adapter — `DRAFT v0.1`
+
+Passing CI does not automatically move an adapter from DRAFT to STABLE.
+
+---
+
+## Human Authority and AI Assistance
+
+ATF-AI permits AI-assisted governance workflows but does not delegate protocol authority to a model.
+
+```text
+AI / Tool Assistance
+        |
+        v
+Proposal / Analysis / Tests
+        |
+        v
+Human Maintainer Review
+        |
+        v
+CI + Governance Requirements
+        |
+        v
+Human Acceptance / Rejection
+        |
+        v
+Governance Record / Merge
+```
+
+This separation mirrors ATF-AI's broader zero-trust principle: possessing technical capability does not, by itself, create governance authority.
 
 ---
 
 ## Governance Records
 
-All governance decisions that affect the protocol produce **Governance Attestations** — a specific type of [Attestation](./attestation.md) in ATF-AI. This means the governance history of the protocol is itself subject to the same provenance and traceability guarantees as any other agent action.
+Material governance decisions should produce an auditable record through repository history and, where applicable, a Governance Attestation.
 
-Examples of governance records:
-- "ATF-AI Core Spec v1.1 approved on 2024-06-01 by Protocol Steward"
-- "ERC-8040 Adapter certified as official ATF-AI adapter on 2024-03-24"
-- "Security disclosure ATF-SEC-2024-01 resolved in patch v1.0.3"
+Examples include:
+
+- approval of a new core version;
+- adapter transition from `DRAFT` to `REVIEW` or `STABLE`;
+- security mitigation acceptance;
+- certification issuance or revocation;
+- deprecation decisions.
+
+Illustrative record:
+
+```text
+Decision: RWA Privileged Action Governance Adapter accepted as DRAFT v0.1
+Authority: AgroNet Labs / Maintainer
+Core compatibility: ATF-AI Core v1
+Evidence: specification + schema + Rust reference validator + passing CI
+Status: DRAFT (not STABLE)
+```
 
 ---
 
-## Relationship with GOVERNANCE.md
+## Conformance vs. Certification
 
-This document describes the governance model at a conceptual level. The operational governance policies — including contact information, response SLAs, and current version status — are maintained in the [`GOVERNANCE.md`](../../GOVERNANCE.md) file at the repository root.
+**Conformance** means an implementation can demonstrate compliance with the applicable ATF-AI Core and adapter requirements.
+
+**ATF-AI Certified** is a formal designation issued through the governance process defined by AgroNet Labs. Conformance alone does not automatically grant certification.
+
+This distinction prevents self-certification from being confused with independent or steward-issued review.
+
+---
+
+## Relationship with Root Governance
 
 | Document | Purpose |
 |---|---|
-| `docs/concepts/governance.md` (this file) | Conceptual model: roles, principles, decision processes |
-| `GOVERNANCE.md` (root) | Operational: current policies, contacts, version status |
-| `specs/atf-core-v1.md` | Technical: formal protocol specification |
+| `docs/concepts/governance.md` | Conceptual model and role separation |
+| [`GOVERNANCE.md`](../../GOVERNANCE.md) | Operational authority, review gates, lifecycle, certification |
+| [`CONTRIBUTING.md`](../../CONTRIBUTING.md) | Contribution workflow and AI-assistance disclosure |
+| [`specs/atf-core-v1.md`](../../specs/atf-core-v1.md) | Technical core protocol specification |
 
 ---
 
 ## Related Concepts
 
-- [Provenance](./provenance.md) — governance decisions produce provenance records
-- [Attestation](./attestation.md) — governance outcomes are expressed as attestations
-- [Zero-Trust](./zero-trust.md) — governance enforcement relies on zero-trust agent identity
+- [Provenance](./provenance.md) — evidence underlying governance records
+- [Attestation](./attestation.md) — signed governance/compliance declarations
+- [Zero-Trust](./zero-trust.md) — no capability is implicitly trusted
