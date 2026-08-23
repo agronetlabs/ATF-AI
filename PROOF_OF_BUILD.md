@@ -1,181 +1,146 @@
-# Proof of Build — ERC-8040 Ecosystem
+# Proof of Build — ATF-AI / ERC-8040
 
-> Verified build results across all SDKs and components.
-> Date: 2026-05-18 | AgroNet Labs LLC
-
----
-
-## Summary
-
-| SDK | Language | Tests | Status |
-|-----|----------|-------|--------|
-| ERC-8040 Core | Rust | 31/31 | ✅ Passing |
-| Python SDK | Python 3.12 | 30/30 | ✅ Passing |
-| C++ SDK | C++17 / GCC 15.2.0 | 10/10 | ✅ Passing |
-| Backend (Settlement) | Rust / Axum | 10/10 | ✅ Passing |
-| **TOTAL** | **4 languages** | **81/81** | **✅ Zero failures** |
+This document separates **current repository CI evidence** from **historical broader-ecosystem build snapshots** so test totals are not mixed across different dates or components.
 
 ---
 
-## Rust Core — 31/31 Passing
+## Current ATF-AI Repository CI
 
+**Date:** 2026-08-23  
+**Workflow:** `Spec CI`  
+**Run:** `#158` / GitHub Actions run `32613970456`  
+**Result:** ✅ Success
+
+The RWA Privileged Action Governance update was validated before merge with:
+
+| Check | Result |
+|---|---:|
+| Rust unit tests | **31/31 passing** |
+| Rust integration tests | **6/6 passing** |
+| **Current Rust total** | **37/37 passing** |
+| `specs/ERC-8040-atf.schema.json` | **valid** |
+| `specs/atf-rwa-privileged-action.schema.json` | **valid** |
+
+### New RWA Governance Tests Included
+
+The current Rust unit suite includes the RWA governance cases introduced in August 2026:
+
+```text
+rwa::governance::tests::approves_when_policy_is_satisfied ... ok
+rwa::governance::tests::escalates_when_quorum_is_incomplete ... ok
+rwa::governance::tests::escalates_until_timelock_expires ... ok
+rwa::governance::tests::rejects_duplicate_approvers_when_distinct_required ... ok
+rwa::governance::tests::rejects_missing_provenance ... ok
+rwa::governance::tests::rejects_upgrade_while_redemptions_are_active ... ok
 ```
-running 25 tests
-test compliance::validator::tests::test_compliance_status_as_str ... ok
-test compliance::validator::tests::test_compliance_validator ... ok
-test compliance::validator::tests::test_invalid_required_esg_rating ... ok
-test compliance::validator::tests::test_overall_status ... ok
-test esg::categories::tests::test_esg_category_code ... ok
-test esg::categories::tests::test_environmental_metrics_default ... ok
-test esg::scoring::tests::test_esg_rating_from_score ... ok
-test esg::scoring::tests::test_esg_rating_investment_grade ... ok
-test esg::scoring::tests::test_esg_score_new ... ok
-test esg::scoring::tests::test_esg_scoring_custom_weights ... ok
-test esg::scoring::tests::test_esg_scoring_default ... ok
-test esg::scoring::tests::test_esg_scoring_try_with_weights_invalid ... ok
-test iso20022::bridge::tests::test_create_setr_with_esg ... ok
-test iso20022::bridge::tests::test_esg_to_iso ... ok
-test iso20022::bridge::tests::test_sfdr_article_mapping ... ok
-test iso20022::types::tests::test_esg_classification ... ok
-test iso20022::types::tests::test_esg_purpose_iso_code ... ok
-test iso20022::types::tests::test_financial_instrument ... ok
-test oracle::provider::tests::test_mock_oracle_provider ... ok
-test oracle::provider::tests::test_mock_oracle_with_custom_score ... ok
-test oracle::provider::tests::test_oracle_request ... ok
 
-test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured
+Current Rust result:
 
-running 6 tests
-test test_compliance_validation_workflow ... ok
-test test_esg_scoring_workflow ... ok
-test test_full_workflow ... ok
-test test_iso20022_bridge_workflow ... ok
-test test_oracle_provider_workflow ... ok
-test test_erc8040_version ... ok
+```text
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured
 
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured
 ```
 
+Schema validation result:
+
+```text
+schema specs/ERC-8040-atf.schema.json is valid
+schema specs/atf-rwa-privileged-action.schema.json is valid
+```
+
+The current CI therefore demonstrates that the canonical Rust reference implementation and both machine-readable schemas compile/validate successfully together.
+
 ---
 
-## Python SDK — 30/30 Passing
+## Historical Extended Ecosystem Snapshot
 
+**Date:** 2026-05-18  
+**Scope:** ERC-8040 Rust/Python/C++ SDKs + settlement/backend snapshot  
+**Result at that date:** ✅ 81/81 tests passing
+
+| Component | Language | Snapshot result |
+|---|---|---:|
+| ERC-8040 Core | Rust | 31/31 |
+| Python SDK | Python 3.12 | 30/30 |
+| C++ SDK | C++17 / GCC 15.2.0 | 10/10 |
+| Backend (Settlement) | Rust / Axum | 10/10 |
+| **Historical total** | **4 component groups** | **81/81** |
+
+> **Important:** `81/81` is a dated ecosystem snapshot, not the current ATF-AI repository test total. The August 2026 RWA governance work added six new Rust unit tests, and the current repository CI now reports **37/37 Rust tests**. Python, C++, and external settlement/backend components were not re-run by the current `Spec CI`, so this document does not manufacture a new combined total.
+
+---
+
+## Historical Rust Snapshot — 2026-05-18
+
+At the May snapshot, the Rust core recorded 25 unit tests plus 6 integration tests:
+
+```text
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured
 ```
-platform win32 -- Python 3.12.10, pytest-9.0.2
+
+The August 2026 RWA module increased the unit-test count from 25 to 31 while preserving the 6 integration tests.
+
+---
+
+## Historical Python SDK Snapshot — 2026-05-18
+
+```text
+platform win32 -- Python 3.12.10
 collected 30 items
-
-tests/test_compliance.py::test_compliance_validator PASSED
-tests/test_compliance.py::test_compliance_status PASSED
-tests/test_compliance.py::test_compliance_rule_is_effective PASSED
-tests/test_compliance.py::test_compliance_rule_applies_to PASSED
-tests/test_compliance.py::test_compliance_validator_add_rule PASSED
-tests/test_compliance.py::test_compliance_validator_validate_esg PASSED
-tests/test_compliance.py::test_compliance_validator_overall_status PASSED
-tests/test_compliance.py::test_compliance_validator_invalid_required_rating PASSED
-tests/test_esg.py::test_esg_rating_from_score PASSED
-tests/test_esg.py::test_esg_rating_investment_grade PASSED
-tests/test_esg.py::test_esg_scoring PASSED
-tests/test_esg.py::test_esg_score_create PASSED
-tests/test_esg.py::test_esg_scoring_custom_weights PASSED
-tests/test_esg.py::test_esg_score_is_investment_grade PASSED
-tests/test_esg.py::test_esg_scoring_invalid_weights PASSED
-tests/test_iso20022.py::test_map_sfdr_article_article_9 PASSED
-tests/test_iso20022.py::test_map_sfdr_article_article_8 PASSED
-tests/test_iso20022.py::test_map_sfdr_article_article_6 PASSED
-tests/test_iso20022.py::test_calculate_taxonomy_alignment_high_score PASSED
-tests/test_iso20022.py::test_calculate_taxonomy_alignment_medium_score PASSED
-tests/test_iso20022.py::test_calculate_taxonomy_alignment_low_score PASSED
-tests/test_iso20022.py::test_esg_to_iso_high_performance PASSED
-tests/test_iso20022.py::test_esg_to_iso_medium_performance PASSED
-tests/test_iso20022.py::test_esg_to_iso_low_performance PASSED
-tests/test_iso20022.py::test_create_setr_message PASSED
-tests/test_iso20022.py::test_create_setr_message_integration PASSED
-tests/test_iso20022.py::test_financial_instrument_creation PASSED
-tests/test_iso20022.py::test_esg_classification_creation PASSED
-tests/test_iso20022.py::test_esg_classification_without_carbon_intensity PASSED
-tests/test_iso20022.py::test_carbon_intensity_estimation PASSED
-
 30 passed in 0.53s
 ```
 
----
-
-## C++ SDK — 10/10 Passing
-
-```
-=== ERC-8040 C++ SDK - ESG Tests ===
-
-[PASS] test_esg_scoring
-[PASS] test_rating_from_score
-[PASS] test_investment_grade
-[PASS] test_rating_to_string
-[PASS] test_invalid_weights
-
-✅ All ESG tests passed!
-
-=== ERC-8040 C++ SDK - Compliance Tests ===
-
-[PASS] test_validate_esg_compliant
-[PASS] test_validate_esg_non_compliant
-[PASS] test_overall_status_compliant
-[PASS] test_overall_status_non_compliant
-[PASS] test_overall_status_partial
-
-✅ All Compliance tests passed!
-
-========================================
-  RESULT: 2/2 TEST SUITES | 10/10 PASSED
-  C++17 | GCC 15.2.0 | ATF-AI Verified
-========================================
-```
+Coverage at the snapshot included compliance rules, ESG scoring, SFDR mapping, taxonomy alignment, ISO 20022 message creation, and carbon-intensity estimation.
 
 ---
 
-## Backend Settlement — 10/10 Passing
+## Historical C++ SDK Snapshot — 2026-05-18
 
+```text
+RESULT: 2/2 TEST SUITES | 10/10 PASSED
+C++17 | GCC 15.2.0
 ```
-running 10 tests
-test settlement::tests::test_build_audit_hash ... ok
-test settlement::tests::test_execute_settlement ... ok
-test settlement::tests::test_validate_settlement_request ... ok
-test ledger::tests::test_double_entry ... ok
-test ledger::tests::test_balance_invariant ... ok
-test blockchain::tests::test_ethereum_provider ... ok
-test blockchain::tests::test_tron_provider ... ok
-test blockchain::tests::test_cctp_provider ... ok
-test liquidity::tests::test_pull_liquidity ... ok
-test auth::tests::test_jwt_flow ... ok
 
+The snapshot included ESG scoring and compliance validation tests.
+
+---
+
+## Historical Backend Settlement Snapshot — 2026-05-18
+
+```text
 test result: ok. 10 passed; 0 failed
 ```
 
-### Live Settlement Output
+The recorded backend snapshot included settlement validation, double-entry ledger invariants, Ethereum/Tron/CCTP provider tests, liquidity behavior, and authentication flow tests.
 
-```json
-{
-  "audit_hash": "ATF-AI-AUDIT-A3F9C2B1...",
-  "balance": 50000.00,
-  "pulled_amount": 1000.00,
-  "stablecoin": "USDT",
-  "status": "ok",
-  "token_id": "ERC8040-001"
-}
+### Settlement Evidence
+
+![ATF-AI Settlement Live](assets/proof/atf-ai-audit-hash-live.jpg)
+
+The referenced implementation produced audit identifiers in the form:
+
+```text
+ATF-AI-AUDIT-{SHA256}
 ```
 
-`ATF-AI-AUDIT-{SHA256}` generated automatically on every settlement — full provenance chain.
+### Backend Build Evidence
+
+![Backend Build Passing](assets/proof/backend-build-passing.jpg)
 
 ---
 
-## Environment
+## Evidence Policy
 
-```
-OS:       Windows 10 / Ubuntu compatible
-Rust:     1.78+
-Python:   3.12.10
-C++:      C++17 / GCC 15.2.0
-Node:     v26.1.0
-Wrangler: 4.92.0
-```
+ATF-AI documentation should distinguish:
+
+- **current CI evidence** — reproduced by the repository's active workflow;
+- **dated external/component snapshots** — results recorded at a specific point in time;
+- **planned or claimed capabilities** — which must not be represented as passing tests without evidence.
+
+A passing CI run demonstrates that the tested artifacts passed the declared checks. It does **not** by itself imply production readiness, external security audit, regulatory approval, adapter stability, or ATF-AI certification.
 
 ---
 

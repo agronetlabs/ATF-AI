@@ -1,13 +1,7 @@
-permissions:
-  pull_requests: write
-  contents: write
-rules:
-  auto_review:
-    enabled: true
-    comment: "✅ Auto-approved by Copilot CI"
-  auto_merge:
-    enabled: true
-    method: squash
-  auto_label:
-    enabled: true
-    labels: ["auto", "ci"]
+# Deprecated compatibility placeholder.
+# Repository-wide GitHub Copilot instructions are maintained in:
+#   .github/copilot-instructions.md
+#
+# This file intentionally contains no auto-approval, auto-merge, or write-permission rules.
+deprecated: true
+canonical_instructions: .github/copilot-instructions.md

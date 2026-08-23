@@ -1,88 +1,214 @@
 # ATF-AI Governance
 
-This document describes the governance model for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)**. ATF-AI is an open protocol coordinated by **AgroNet Labs**, but the framework itself is infrastructure-neutral and independent of any specific technology stack.
+This document defines the operational governance model for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)**.
+
+ATF-AI is an open, infrastructure-agnostic protocol coordinated by **AgroNet Labs LLC**. The protocol may be developed with substantial AI assistance, but **governance authority remains human and organizational**.
 
 ---
 
 ## Governance Model
 
-ATF-AI operates as an **open protocol with coordinated stewardship**. This means:
+ATF-AI operates as an **open protocol with coordinated stewardship**:
 
-- The specification and core documentation are publicly available and freely adoptable by any individual, team, or organization.
-- **AgroNet Labs** acts as the coordinating body — responsible for versioning the spec, reviewing proposals, and maintaining the integrity of the ATF-AI certification process.
-- No single infrastructure, vendor, or technology is privileged within the framework. Blockchain, cloud, enterprise, IoT, and other adapters are all equal consumers of the protocol.
-
----
-
-## Decision Making
-
-Changes to the ATF-AI specification follow a transparent, structured process:
-
-### Proposal
-Any contributor may propose a change by opening a GitHub Issue or Pull Request in this repository. The proposal must include:
-- A clear description of the problem being solved.
-- The proposed change to the specification or documentation.
-- Rationale for why the change is infrastructure-agnostic (or, if adapter-specific, why it belongs in the core spec).
-
-### Review
-All proposals are reviewed by the **Maintainers** team. The review criteria are:
-1. **Agnosticism** — Does the change apply regardless of the underlying infrastructure?
-2. **Correctness** — Is the change technically sound and unambiguous?
-3. **Backward compatibility** — Does the change maintain compatibility with existing ATF-AI implementations, or is a version bump required?
-
-### Acceptance
-- Minor changes (documentation clarifications, non-breaking additions) require approval from **at least one Maintainer**.
-- Breaking changes to the core specification require approval from **AgroNet Labs** and a version bump following the versioning policy below.
-- All accepted changes must include updated provenance metadata before merging.
+- The specification and core documentation are publicly available and freely adoptable.
+- **AgroNet Labs LLC** acts as Protocol Steward and coordinating body.
+- Core rules remain infrastructure- and vendor-neutral.
+- Blockchain, cloud, enterprise, IoT, financial, and other adapters consume the protocol without becoming privileged dependencies.
+- AI systems may assist analysis, implementation, testing, and documentation, but do not independently approve protocol changes or certifications.
 
 ---
 
-## Roles
+## Authority and Roles
+
+### Protocol Steward
+
+**AgroNet Labs LLC** is the Protocol Steward and is responsible for:
+
+- maintaining the canonical ATF-AI specification;
+- approving breaking changes to the core protocol;
+- coordinating versioning and release policy;
+- recognizing official ATF-AI adapters;
+- issuing or revoking formal ATF-AI certification;
+- maintaining governance and security records.
 
 ### Maintainers
-Maintainers are responsible for reviewing proposals, merging pull requests, and maintaining the quality of the ATF-AI specification. Maintainers are designated by AgroNet Labs.
 
-**Current Maintainers:**
+Maintainers review proposals, merge Pull Requests, maintain reference implementations, and enforce governance requirements.
+
+**Current Maintainer:**
 - Leandro Lemos — Founder & Lead Engineer, AgroNet Labs LLC
 
-### Contributors
-Contributors are any individuals or organizations that submit issues, pull requests, documentation improvements, or adapter implementations. All contributors must follow the [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contributing Guidelines](./CONTRIBUTING.md).
+The repository's `CODEOWNERS` file defines the canonical GitHub review owner.
 
-### Adapter Authors
-Adapter Authors are teams or individuals who build ATF-AI-compatible integrations for specific infrastructures (e.g., blockchain networks, cloud platforms, IoT systems). Adapter Authors:
-- Are responsible for maintaining their own adapter repositories.
-- May request official ATF-AI Adapter recognition by submitting a proposal to this repository.
-- Must not modify or claim ownership of the ATF-AI core specification.
+### Contributors
+
+Contributors may submit issues, Pull Requests, documentation, tests, schemas, adapter implementations, security analysis, and governance proposals. Contributors must follow [`CONTRIBUTING.md`](./CONTRIBUTING.md), [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md), and [`SECURITY.md`](./SECURITY.md).
+
+### Adapter Maintainers
+
+Adapter Maintainers are responsible for:
+
+- keeping an adapter compatible with its declared ATF-AI Core version;
+- publishing adapter-level conformance and security requirements;
+- maintaining tests and machine-readable schemas where applicable;
+- responding to security disclosures affecting the adapter.
+
+### Independent Auditors
+
+Independent auditors may validate attestations, provenance chains, implementation behavior, security controls, and conformance claims. They do not need governance authority to issue an independent assessment.
 
 ---
 
-## ATF-AI Certification
+## AI-Assisted Governance Boundary
 
-A system is considered **ATF-AI Certified** when it demonstrably implements all three layers of the ATF-AI specification:
+ATF-AI permits AI-assisted development and review, but **AI systems are non-authoritative participants**.
 
-| Requirement | Description |
-|-------------|-------------|
-| **Agent Layer compliance** | All agent actions emit verifiable in-toto provenance attestations. |
-| **Governance Layer compliance** | All validation rules are deterministic, version-controlled, and auditable. |
-| **Execution Layer compliance** | Only governance-approved workflows execute, and results are recorded in the provenance chain. |
+An AI model or agent may:
 
-ATF-AI Certification is **not** tied to any specific blockchain standard, cloud provider, or technology platform. Any compliant implementation — regardless of underlying infrastructure — may apply for certification.
+- propose architecture or specification changes;
+- generate or review code and documentation;
+- perform deterministic validation or test generation;
+- analyze security and compliance evidence;
+- assist CI/CD and provenance workflows.
 
-To apply for ATF-AI Certification, contact **AgroNet Labs** at admin@agronet.io.
+An AI model or agent may **not**, by itself:
+
+- approve a breaking core-spec change;
+- issue ATF-AI certification;
+- self-approve or self-merge a Pull Request;
+- override a human maintainer decision;
+- convert repository, wallet, signer, API, or infrastructure credentials into governance authority.
+
+Model/vendor attribution is informational only. ATF-AI is not governed by, dependent on, or controlled by any specific AI provider.
+
+---
+
+## Decision-Making Process
+
+### Proposal
+
+A material change should be proposed through a GitHub Issue or Pull Request and include:
+
+- the problem being solved;
+- whether the change affects the **core protocol** or an **adapter**;
+- technical rationale;
+- backward-compatibility impact;
+- security implications;
+- test/schema/documentation impact.
+
+### Review Criteria
+
+Maintainers review proposals for:
+
+1. **Agnosticism** — core changes must remain infrastructure-neutral.
+2. **Correctness** — requirements must be technically sound and unambiguous.
+3. **Determinism** — governance behavior must be reproducible and auditable.
+4. **Backward compatibility** — breaking changes require explicit versioning.
+5. **Security** — privileged operations and trust boundaries must be explicit.
+6. **Provenance** — accepted changes must remain attributable and traceable.
+7. **Validation** — relevant CI, tests, and schemas must pass before merge.
+
+### Change Classes
+
+| Change | Minimum governance path |
+|---|---|
+| **PATCH** — typo, clarification, non-behavioral fix | Maintainer review + passing applicable CI |
+| **MINOR** — backward-compatible feature or adapter interface | Maintainer approval + public review period when material |
+| **MAJOR** — breaking core change | Protocol Steward approval + RFC process + major version bump |
+| **SECURITY** — urgent mitigation | Expedited Maintainer/Steward approval with post-merge governance record |
+
+For planned material MINOR changes, the normal target is a **14-day public comment period**. For MAJOR core changes, the normal RFC discussion period is **30 days**. The Protocol Steward may shorten these periods for urgent security or operational reasons, but the rationale must be documented.
+
+---
+
+## Adapter Lifecycle
+
+Official ATF-AI adapters use the following maturity states:
+
+| Status | Meaning |
+|---|---|
+| `DRAFT` | Design is open to material change; implementation and threat model are still evolving. |
+| `REVIEW` | Interface is substantially defined and undergoing external or integration review. |
+| `STABLE` | Conformance surface is versioned and changes follow compatibility rules. |
+| `DEPRECATED` | Superseded or no longer recommended for new implementations. |
+
+Current examples:
+
+- `specs/adapters/erc8040.md` — **DRAFT v0.1**
+- `specs/adapters/rwa-privileged-governance.md` — **DRAFT v0.1**
+
+A DRAFT adapter must not be represented as a stable standard solely because reference code exists or CI passes.
+
+---
+
+## Pull Request Acceptance Gates
+
+Before a material Pull Request is merged, maintainers should confirm the applicable gates:
+
+- scope is correctly classified as core, adapter, reference implementation, documentation, or security;
+- schemas compile when changed;
+- executable tests pass;
+- privileged operations preserve separation between governance authorization and cryptographic execution;
+- no secrets, private keys, seed phrases, MPC shares, or sensitive credentials are committed;
+- documentation and version metadata are consistent;
+- AI-assisted work has human review when material;
+- the final merge decision is made by an authorized human maintainer.
+
+CI success is necessary evidence where applicable, but **CI success is not protocol approval by itself**.
+
+---
+
+## Conformance vs. Certification
+
+**Conformance** and **certification** are different claims.
+
+An implementation may claim **ATF-AI conformance** when it can demonstrate compliance with the applicable core specification and declared adapter requirements.
+
+The designation **ATF-AI Certified** is reserved for implementations that have completed an explicit certification review and received a certification decision issued under AgroNet Labs governance.
+
+A certification review should verify, at minimum:
+
+| Requirement | Evidence expectation |
+|---|---|
+| **Agent Layer** | Verifiable provenance and trace context for governed actions. |
+| **Governance Layer** | Deterministic, versioned, auditable policy decisions. |
+| **Execution Layer** | Execution gated on approved governance decisions with recorded outcomes. |
+| **Security** | Relevant threat model, key/privileged-action controls, and disclosure process. |
+| **Adapter conformance** | Declared adapter requirements and version compatibility. |
+
+Certification is not tied to a specific blockchain, cloud provider, AI model, wallet vendor, or execution technology.
+
+To request a certification review, contact **admin@agronet.io**.
+
+---
+
+## Governance Records and Provenance
+
+Material governance decisions should be traceable through repository history and, where applicable, ATF-AI Governance Attestations.
+
+Governance records may include:
+
+- core or adapter version approvals;
+- adapter status transitions (`DRAFT` → `REVIEW` → `STABLE`);
+- security mitigations;
+- certification issuance or revocation;
+- deprecation decisions.
+
+The governance record should identify the decision, responsible human authority, policy/version context, timestamp, and relevant evidence.
 
 ---
 
 ## Versioning
 
-The ATF-AI specification follows [Semantic Versioning](https://semver.org/):
+ATF-AI follows [Semantic Versioning](https://semver.org/):
 
-- **MAJOR** versions (`v2.0`, `v3.0`) indicate breaking changes to the core specification.
-- **MINOR** versions (`v1.1`, `v1.2`) indicate backward-compatible additions.
-- **PATCH** versions (`v1.0.1`) indicate documentation corrections and clarifications.
+- **MAJOR** (`v2.0`, `v3.0`) — breaking core changes.
+- **MINOR** (`v1.1`, `v1.2`) — backward-compatible additions.
+- **PATCH** (`v1.0.1`) — corrections and clarifications.
 
-All versions are published in this repository under `specs/`. The current stable specification is `specs/atf-core-v1.md`.
+The current stable core specification is [`specs/atf-core-v1.md`](./specs/atf-core-v1.md).
 
-Adapters are expected to declare which version(s) of the ATF-AI specification they implement.
+Adapters must declare their compatible ATF-AI Core version and their own maturity/version status.
 
 ---
 
