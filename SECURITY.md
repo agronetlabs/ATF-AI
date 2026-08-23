@@ -1,87 +1,157 @@
 # Security Policy
 
-This document describes the security policy for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)** specification and its reference artifacts.
+This document describes the security policy for the **Autonomous Trust Framework for Artificial Intelligence (ATF-AI)** specification and canonical reference artifacts maintained in this repository.
 
 ---
 
 ## Supported Versions
 
-The following versions of the ATF-AI specification currently receive security updates:
+| Version / artifact | Status |
+|---|---|
+| `ATF-AI Core v1.x` | ✅ Actively maintained |
+| Canonical reference code in this repository | ✅ Maintained with repository CI |
+| Pre-release / DRAFT adapters | ⚠️ Best-effort security support; interfaces may change |
+| External forks and third-party deployments | ❌ Maintained by their respective operators |
 
-| Version | Status |
-|---------|--------|
-| `v1.x` (current) | ✅ Actively maintained |
-| Pre-release drafts | ⚠️ Best-effort only |
-
-When a security issue is identified, a patch release will be published for all actively maintained versions.
+Security fixes may be published as specification patches, reference-code changes, adapter revisions, or documented mitigations depending on the affected layer.
 
 ---
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in the ATF-AI specification, reference implementations, or associated tooling, please report it **responsibly** by following the process below.
+**Do not open a public GitHub Issue for an undisclosed security vulnerability.**
 
-### How to Report
-
-**Do not open a public GitHub Issue for security vulnerabilities.**
-
-Instead, send an email to:
+Send a private report to:
 
 > **admin@agronet.io**  
 > Subject: `[ATF-AI SECURITY] <brief description>`
 
-Include in your report:
-- A clear description of the vulnerability.
-- The affected component (specification section, reference artifact, or API definition).
-- Steps to reproduce or a proof-of-concept if applicable.
-- Your assessment of the potential impact.
+Include, when available:
 
-### Response SLA
+- affected component and version;
+- vulnerability description;
+- reproduction steps or proof-of-concept;
+- potential impact;
+- suggested mitigation;
+- whether exploitation may expose keys, funds, privileged actions, or sensitive data.
 
-| Stage | Target Time |
-|-------|-------------|
-| **Acknowledgement** | Within 48 hours of receipt |
+### Response Targets
+
+| Stage | Target time |
+|---|---|
+| **Acknowledgement** | Within 48 hours |
 | **Initial assessment** | Within 5 business days |
-| **Resolution or mitigation** | Within 30 days for critical issues; 90 days for lower severity |
+| **Critical mitigation / resolution target** | Within 30 days |
+| **Lower-severity resolution target** | Within 90 days |
 
-We will keep you informed throughout the process and credit your responsible disclosure in the release notes (unless you prefer to remain anonymous).
+These are response targets, not guarantees. Coordinated disclosure timing may be adjusted when user funds, signing infrastructure, or production systems are at risk.
 
 ---
 
 ## Security Model
 
-ATF-AI's security model is built on the same **zero-trust principles** that the framework enforces for AI agent governance:
-
 ### Zero-Trust by Design
-No component of an ATF-AI-governed system is implicitly trusted. Every agent action, governance decision, and execution event must carry verifiable attestations. This principle applies to ATF-AI's own specification artifacts and reference implementations.
+
+No agent, system, credential, signer, or infrastructure component is implicitly trusted. Governed actions must be evaluated against explicit policy before execution.
 
 ### Cryptographic Provenance
-All official ATF-AI specification releases and reference artifacts are signed with cryptographic provenance records (in-toto format). Consumers of the specification can verify the integrity and origin of any official artifact.
 
-### Infrastructure Agnosticism
-ATF-AI's security properties are defined at the protocol level — not tied to any specific infrastructure. This means the security model remains consistent regardless of whether ATF-AI is implemented on a blockchain network, a cloud platform, an enterprise system, or an embedded device.
+ATF-AI uses cryptographic provenance and attestations to make actions, decisions, and evidence traceable and tamper-evident.
+
+### Deterministic Governance
+
+Security-sensitive governance decisions must be based on explicit, version-controlled rules rather than hidden or non-reproducible logic.
+
+### Separation of Governance and Execution
+
+For privileged actions, possession of a valid credential is not sufficient governance authority.
+
+```text
+Action Intent -> Governance Validation -> Approved Attestation -> Signing / Execution
+```
+
+MPC, multisig, HSM, hardware-wallet, or custodian controls remain execution-security mechanisms. ATF-AI governs whether an action is eligible to reach those mechanisms.
 
 ### Auditability
-All changes to the ATF-AI specification are tracked in this public repository with full version history. Any observer can audit the complete evolution of the protocol.
+
+Material specification, implementation, and governance changes are tracked through repository history and CI evidence.
+
+---
+
+## RWA and Privileged-Action Threat Surface
+
+The RWA Privileged Action Governance adapter explicitly treats the following as security-sensitive:
+
+- redemption workflows and state transitions;
+- admin and signer authority;
+- contract upgrades;
+- oracle replacement;
+- compliance-policy changes;
+- mint/burn authority;
+- freeze/pause actions;
+- settlement destination integrity;
+- quorum and segregation of duties;
+- timelocks;
+- transaction-intent binding;
+- rollback / compensation paths;
+- post-execution evidence.
+
+Implementations must separately account for endpoint compromise, social engineering, malicious approvers, oracle manipulation, custodian failure, compromised signing devices, and jurisdiction-specific operational requirements.
+
+See [`specs/adapters/rwa-privileged-governance.md`](./specs/adapters/rwa-privileged-governance.md).
+
+---
+
+## Secrets and Key Material
+
+The repository MUST NOT contain production:
+
+- private keys;
+- seed phrases;
+- wallet recovery material;
+- MPC shares;
+- HSM secrets;
+- API secrets or bearer tokens;
+- production signing credentials;
+- confidential custodian recovery procedures.
+
+Examples and test fixtures must use obviously non-production values.
+
+AI agents SHOULD NOT directly possess unrestricted production private keys solely because they participate in an ATF-AI workflow.
 
 ---
 
 ## Scope
 
 ### In Scope
-The following are within the scope of ATF-AI's security policy:
 
-- The ATF-AI core specification (`specs/atf-core-v1.md` and future versions).
-- The ATF-AI OpenAPI definition (`api/openapi.yaml`).
-- Reference artifacts published in this repository (`specs/registry.json`, schema definitions).
-- The ATF-AI documentation published on GitHub Pages.
+- ATF-AI core specifications under `specs/`;
+- canonical schemas maintained in this repository;
+- reference implementation code under `adapters/`;
+- the RWA Privileged Action Governance reference implementation;
+- ATF-AI OpenAPI artifacts;
+- governance, provenance, and security documentation maintained here;
+- CI logic that validates canonical ATF-AI artifacts.
 
 ### Out of Scope
-The following are **not** covered by this security policy:
 
-- Third-party ATF-AI adapters (e.g., `erc-8040-ecosystem`). Security issues in adapters should be reported to the respective adapter maintainers.
-- Implementations of ATF-AI built by external organizations. AgroNet Labs is not responsible for the security of third-party implementations.
-- GitHub platform-level security issues. Report those directly to GitHub.
+- external forks of ATF-AI;
+- production deployments operated by third parties;
+- third-party wallet, HSM, MPC, custodian, cloud, or blockchain infrastructure;
+- independent implementations not maintained by AgroNet Labs;
+- GitHub platform vulnerabilities.
+
+The separate [`agronetlabs/erc-8040-ecosystem`](https://github.com/agronetlabs/erc-8040-ecosystem) repository maintains its own implementation/security lifecycle; canonical adapter artifacts copied or maintained inside this repository remain in scope here.
+
+---
+
+## Security and Governance
+
+Security changes may use an expedited governance path when delay would materially increase risk. Human Maintainer/Protocol Steward approval remains required, and the decision should produce an auditable post-merge governance record.
+
+AI-generated security analysis is evidence/input only and MUST NOT be treated as independent approval.
+
+See [`GOVERNANCE.md`](./GOVERNANCE.md).
 
 ---
 
