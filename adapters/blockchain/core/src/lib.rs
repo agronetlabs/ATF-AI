@@ -5,10 +5,15 @@ pub mod compliance;
 pub mod esg;
 pub mod iso20022;
 pub mod oracle;
+pub mod rwa;
 
 pub use compliance::{ComplianceRule, ComplianceStatus, ComplianceValidator};
 pub use esg::{ESGCategory, ESGScore, ESGScoring};
 pub use iso20022::ISO20022Bridge;
+pub use rwa::{
+    Approval, GovernanceDecision, GovernanceResult, PrivilegedActionKind,
+    RwaActionContext, RwaGovernancePolicy, RwaGovernanceValidator,
+};
 
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
 pub const STANDARD_ID: &str = "ERC-8040";

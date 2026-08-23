@@ -7,6 +7,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - run: npm i -g ajv-cli ajv-formats
-      - run: ajv compile -s specs/erc-8040-atf.schema.json -c ajv-formats
+      - run: ajv compile -s specs/ERC-8040-atf.schema.json -c ajv-formats
+      - run: ajv compile -s specs/atf-rwa-privileged-action.schema.json -c ajv-formats
+      - run: cargo test --workspace

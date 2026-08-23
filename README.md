@@ -75,9 +75,20 @@ ATF-AI is the framework. Specific technology integrations are **optional downstr
 | Adapter | Description | Link |
 |---------|-------------|------|
 | **erc-8040-ecosystem** | ATF-AI adapter for blockchain/ESG digital asset workflows | [github.com/agronetlabs/erc-8040-ecosystem](https://github.com/agronetlabs/erc-8040-ecosystem) |
+| **RWA Privileged Action Governance** | Deterministic governance for admin actions, redemption, signer policy, and settlement authorization | [spec](./specs/adapters/rwa-privileged-governance.md) · [guide](./docs/integrations/blockchain/rwa-privileged-governance.md) |
 | **Documentation** | Live docs on GitHub Pages | [agronetlabs.github.io/atf-ai](https://agronetlabs.github.io/atf-ai/) |
 
 > Want to build an ATF-AI adapter for your infrastructure (cloud, IoT, health, fintech, agro)? See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+### RWA Privileged Governance Principle
+
+For institutional digital assets, ATF-AI separates **governance authorization** from **cryptographic execution**:
+
+```text
+Action Intent -> ATF-AI Policy Validation -> Governance Attestation -> MPC / Multisig / HSM -> Execution
+```
+
+A valid administrator or signer credential is therefore treated as an execution capability — **not, by itself, as sufficient authority** for a high-impact RWA action.
 
 ---
 
@@ -116,7 +127,7 @@ Implementation and certification trademarks remain under **AgroNet Labs** govern
 | Backend (Settlement) | Rust/Axum | 10/10 | Passing |
 | **Total** | | **81/81** | **Zero failures** |
 
-### ATF-AI Audit Hash â€” Live Settlement
+### ATF-AI Audit Hash — Live Settlement
 
 ![ATF-AI Settlement Live](assets/proof/atf-ai-audit-hash-live.jpg)
 
