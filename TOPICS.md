@@ -1,32 +1,43 @@
 # Suggested Repository Topics
 
-This document lists recommended topics to be added to the GitHub repository settings to improve discoverability and categorization.
+This document lists recommended GitHub repository topics for the current ATF-AI scope.
 
-## Primary Topics
+## Core Protocol Topics
 
-The following topics should be added to this repository via GitHub's repository settings:
+- `autonomous-agents` — governed autonomous-agent workflows
+- `ai-governance` — deterministic governance for AI-assisted systems
+- `zero-trust` — no implicit trust for agents, signers, or systems
+- `provenance` — traceable cryptographic provenance
+- `attestation` — governance/compliance attestation model
+- `interoperability` — infrastructure-agnostic protocol design
+- `compliance` — auditable compliance workflows
+- `policy-as-code` — deterministic policy enforcement
+- `protocol` — open protocol / specification
 
-- `autonomous-agents` - Describes the core subject: governance and trust for autonomous AI agents
-- `ai-governance` - Highlights the framework's focus on governing AI agent behavior
-- `zero-trust` - Reflects ATF-AI's zero-trust validation model
-- `provenance` - Describes the cryptographic provenance tracking capability
-- `ai-framework` - Categorizes ATF-AI as a framework for AI systems
-- `interoperability` - Indicates that ATF-AI works across any infrastructure
-- `compliance` - Reflects the auditable compliance layer
-- `framework` - Generic framework categorization
+## Digital Asset / RWA Topics
 
-## How to Add Topics
+The August 2026 RWA governance work makes the following topics directly relevant:
 
-1. Go to the repository page on GitHub
-2. Click on the gear icon (⚙️) next to "About" in the right sidebar
-3. In the "Topics" field, add each topic listed above
-4. Click "Save changes"
+- `rwa`
+- `real-world-assets`
+- `tokenization`
+- `digital-assets`
+- `asset-tokenization`
+- `settlement`
+- `smart-contracts`
+- `multisig`
+- `mpc`
+- `key-management`
+- `fintech`
 
-## Additional Topics (Optional)
+## Adapter / Observability Topics
 
-Consider also adding these related topics:
-
-- `multi-agent`
+- `erc-20`
+- `iso-20022`
 - `opentelemetry`
-- `attestation`
-- `protocol`
+- `multi-agent`
+- `blockchain`
+
+## Current GitHub Settings Check
+
+Repository metadata should be periodically checked so the public **About** description and topic list remain aligned with the current protocol scope. In particular, the repository should not be described solely as a financial-asset compliance project if the canonical README and Core Spec define ATF-AI as a broader infrastructure-agnostic trust/governance framework.
